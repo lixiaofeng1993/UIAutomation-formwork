@@ -7204,54 +7204,38 @@
 
 
     var resultData = {
-    "testPass": 0,
+    "testPass": 2,
     "testResult": [
         {
             "className": "TestLogin_0",
             "methodName": "test_login",
             "description": null,
-            "spendTime": "8.89 s",
-            "status": "错误",
+            "spendTime": "4.38 s",
+            "status": "成功",
             "log": [
-                "\u001b[32m[2019-11-06 13:52:56,428] [logger.py:95] [logger:__console] [INFO]- 打开网页成功！\u001b[0m\n\u001b[32m[2019-11-06 13:53:01,757] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x03E9F9B0>页面中未能找到元素('xpath', '//div[@class=\"menuContainer___2WW7T\"]/div/ul/li/a/span')\u001b[0m\n['__call__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_addExpectedFailure', '_addSkip', '_addUnexpectedSuccess', '_baseAssertEqual', '_classSetupFailed', '_cleanups', '_deprecate', '_diffThreshold', '_feedErrorsToResult', '_formatMessage', '_getAssertEqualityFunc', '_outcome', '_subtest', '_testMethodDoc', '_testMethodName', '_truncateMessage', '_type_equality_funcs', 'addCleanup', 'addTypeEqualityFunc', 'assertAlmostEqual', 'assertAlmostEquals', 'assertCountEqual', 'assertDictContainsSubset', 'assertDictEqual', 'assertEqual', 'assertEquals', 'assertFalse', 'assertGreater', 'assertGreaterEqual', 'assertIn', 'assertIs', 'assertIsInstance', 'assertIsNone', 'assertIsNot', 'assertIsNotNone', 'assertLess', 'assertLessEqual', 'assertListEqual', 'assertLogs', 'assertMultiLineEqual', 'assertNotAlmostEqual', 'assertNotAlmostEquals', 'assertNotEqual', 'assertNotEquals', 'assertNotIn', 'assertNotIsInstance', 'assertNotRegex', 'assertNotRegexpMatches', 'assertRaises', 'assertRaisesRegex', 'assertRaisesRegexp', 'assertRegex', 'assertRegexpMatches', 'assertSequenceEqual', 'assertSetEqual', 'assertTrue', 'assertTupleEqual', 'assertWarns', 'assertWarnsRegex', 'assert_', 'countTestCases', 'debug', 'defaultTestResult', 'doCleanups', 'driver', 'fail', 'failIf', 'failIfAlmostEqual', 'failIfEqual', 'failUnless', 'failUnlessAlmostEqual', 'failUnlessEqual', 'failUnlessRaises', 'failureException', 'getFullParametersSequence', 'getParameters', 'getTestCaseIndex', 'id', 'img_path', 'log', 'login', 'longMessage', 'maxDiff', 'pwd', 'run', 'save_img', 'setParameters', 'setUp', 'setUpClass', 'shortDescription', 'skipTest', 'subTest', 'tearDown', 'tearDownClass', 'test_login', 'test_upload', 'url', 'user'] 111111\n",
-                "Traceback (most recent call last):\n",
-                "  File \"D:\\python\\lib\\site-packages\\BeautifulReport\\BeautifulReport.py\", line 424, in __wrap\n    result = func(*args, **kwargs)\n",
-                "  File \"D:\\UIAutomation-formwork\\case\\test_login.py\", line 48, in test_login\n    self.assertEqual(login.text_check_login_success(0), '首页')\n",
-                "  File \"D:\\UIAutomation-formwork\\page\\login_page.py\", line 30, in text_check_login_success\n    return self.get_texts(self.check_login_success_loc, n)\n",
-                "  File \"D:\\UIAutomation-formwork\\common\\basics.py\", line 349, in get_texts\n    element = self.find_elements(locator)[n]\n",
-                "TypeError: 'bool' object is not subscriptable\n",
-                "\nDuring handling of the above exception, another exception occurred:\n\n",
-                "Traceback (most recent call last):\n",
-                "  File \"D:\\python\\lib\\unittest\\case.py\", line 59, in testPartExecutor\n    yield\n",
-                "  File \"D:\\python\\lib\\unittest\\case.py\", line 605, in run\n    testMethod()\n",
-                "  File \"D:\\python\\lib\\site-packages\\BeautifulReport\\BeautifulReport.py\", line 430, in __wrap\n    data = BeautifulReport.img2base(img_path, pargs[0] + '.png')\n",
-                "  File \"D:\\python\\lib\\site-packages\\BeautifulReport\\BeautifulReport.py\", line 406, in img2base\n    with open(img_path + pattern + file_name, 'rb') as file:\n",
-                "FileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\img\\\\test_login.png'\n"
+                "\u001b[32m[2019-11-06 16:10:33,754] [logger.py:98] [logger:__console] [INFO]- 打开网页成功！\u001b[0m",
+                "<br></br>",
+                ""
             ]
         },
         {
             "className": "TestLogin_0",
             "methodName": "test_upload",
             "description": null,
-            "spendTime": "8.04 s",
-            "status": "错误",
+            "spendTime": "17.0 s",
+            "status": "成功",
             "log": [
-                "\u001b[32m[2019-11-06 13:53:10,352] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x03E9F9B0>页面中未能找到元素('xpath', '//div[@class=\"menuContainer___2WW7T\"]/div/ul/li')\u001b[0m\n",
-                "Traceback (most recent call last):\n",
-                "  File \"D:\\python\\lib\\unittest\\case.py\", line 59, in testPartExecutor\n    yield\n",
-                "  File \"D:\\python\\lib\\unittest\\case.py\", line 605, in run\n    testMethod()\n",
-                "  File \"D:\\UIAutomation-formwork\\case\\test_login.py\", line 53, in test_upload\n    login.clicks_tag(4)\n",
-                "  File \"D:\\UIAutomation-formwork\\page\\login_page.py\", line 35, in clicks_tag\n    self.clicks(self.tag_loc, n)\n",
-                "  File \"D:\\UIAutomation-formwork\\common\\basics.py\", line 161, in clicks\n    element = self.find_elements(locator)[n]\n",
-                "TypeError: 'bool' object is not subscriptable\n"
+                "\u001b[32m[2019-11-06 16:10:44,706] [logger.py:98] [logger:__console] [INFO]- 开始上传图片...\u001b[0m",
+                "\u001b[32m[2019-11-06 16:10:46,849] [logger.py:98] [logger:__console] [INFO]- 上传图片成功... 26.jpg\u001b[0m",
+                ""
             ]
         }
     ],
     "testName": "UI自动化测试",
     "testAll": 2,
     "testFail": 0,
-    "testError": 2,
-    "beginTime": "2019-11-06 13:52:47",
+    "testError": 0,
+    "beginTime": "2019-11-06 16:10:25",
     "totalTime": "27s",
     "testSkip": 0
 };

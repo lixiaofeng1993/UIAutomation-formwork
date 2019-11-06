@@ -39,12 +39,24 @@ class LoginPage(Crazy):
     def clicks_ant_tag(self, n):
         self.clicks(self.ant_tag_loc, n)
 
-    add_video_loc = ('xpath', '//div[@class="header___3l9tq"]/span/button')
+    # add_video_loc = ('xpath', '//div[@class="header___3l9tq"]/span/button')
+    add_video_loc = ('xpath', '//div[@class="addPicture___2RcWX"]/button')
 
     def click_add_video(self):
         self.click(self.add_video_loc)
 
-    click_upload_loc = ('xpath', '//form[@class="ant-form ant-form-horizontal"]/div[6]/div[2]/div/span')
+    # click_upload_loc = ('xpath', '//form[@class="ant-form ant-form-horizontal"]/div[6]/div[2]/div/span')
+    click_upload_loc = ('xpath', '//div[@class="ant-upload ant-upload-select ant-upload-select-picture-card"]/span/div')
 
     def click_upload(self):
         self.click(self.click_upload_loc)
+
+    img_name_loc = ('id', 'name')
+
+    def input_img_name(self, name):
+        self.send_keys(self.img_name_loc, name)
+
+    sure_loc = ('xpath', '//div[@class="ant-modal-content"]/div[3]/div/button[2]')
+
+    def click_sure(self):
+        self.click(self.sure_loc)

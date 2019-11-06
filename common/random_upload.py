@@ -6,9 +6,8 @@
 # @File    : random_upload.py
 # @Software: PyCharm
 
-import os, random
+import os, random, time
 from common.logger import Log
-from common import read_config
 from common.settings import driver_path, check_file, data_path, data_img_path, file_not_exists_error
 
 log = Log()
@@ -29,25 +28,29 @@ def uploaded(type=0):
         if not check_file(os.path.join(data_img_path, '{}.jpg').format(random_num())):
             log.error('要图片的视频不存在！')
         else:
-            os.system('{} "{}"'.format(autolt_path, os.path.join(data_img_path, '{}.jpg').format(random_num())))
-            log.info('上传图片成功... {}.jpg'.format(random_num()))
+            time.sleep(1)
+            os.system(r'{} {}'.format(autolt_path, os.path.join(data_img_path, '{}.jpg').format(random_num())))
+            log.info('上传图片成功... {},{}'.format(autolt_path, os.path.join(data_img_path, '{}.jpg').format(random_num())))
     elif type == 1:
         log.info('开始上传视频...')
         if not check_file(os.path.join(data_path, 'video.mp4')):
             log.error('要上传的视频不存在！')
         else:
-            os.system('{} "{}"'.format(autolt_path, os.path.join(data_path, 'video.mp4')))
-            log.info('上传视频成功... video.mp4')
+            time.sleep(1)
+            os.system('{} {}'.format(autolt_path, os.path.join(data_path, 'video.mp4')))
+            log.info('上传视频成功... {},{}'.format(autolt_path, os.path.join(data_path, 'video.mp4')))
     elif type == 2:
         log.info('开始上传音频...')
         if not check_file(os.path.join(data_path, 'audio.wav')):
             log.error('要上传的音频不存在！')
         else:
-            os.system('{} "{}"'.format(autolt_path, os.path.join(data_path, 'audio.wav')))
+            time.sleep(1)
+            os.system('{} {}'.format(autolt_path, os.path.join(data_path, 'audio.wav')))
             log.info('上传音频成功... audio.wav')
     else:
         log.error('上传文件类型错误，上传失败!')
 
 
 if __name__ == '__main__':
-    uploaded(type=0)
+    # uploaded(type=0)
+    os.system(r'D:\UIAutomation-formwork\driver\upload.exe D:\UIAutomation-formwork\data\img\28.jpg')

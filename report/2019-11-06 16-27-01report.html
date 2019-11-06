@@ -7204,55 +7204,39 @@
 
 
     var resultData = {
-    "testPass": 0,
+    "testPass": 2,
     "testResult": [
         {
             "className": "TestLogin_0",
             "methodName": "test_login",
             "description": null,
-            "spendTime": "8.67 s",
-            "status": "错误",
+            "spendTime": "4.47 s",
+            "status": "成功",
             "log": [
-                "D:\\img 1111111111111\n\u001b[32m[2019-11-06 13:42:02,570] [logger.py:95] [logger:__console] [INFO]- 打开网页成功！\u001b[0m\n\u001b[32m[2019-11-06 13:42:07,859] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x04BFF9B0>页面中未能找到元素('xpath', '//div[@class=\"menuContainer___2WW7T\"]/div/ul/li/a/span')\u001b[0m\n",
-                "Traceback (most recent call last):\n",
-                "  File \"D:\\python\\lib\\site-packages\\BeautifulReport\\BeautifulReport.py\", line 425, in __wrap\n    result = func(*args, **kwargs)\n",
-                "  File \"D:\\UIAutomation-formwork\\case\\test_login.py\", line 48, in test_login\n    self.assertEqual(login.text_check_login_success(0), '首页')\n",
-                "  File \"D:\\UIAutomation-formwork\\page\\login_page.py\", line 30, in text_check_login_success\n    return self.get_texts(self.check_login_success_loc, n)\n",
-                "  File \"D:\\UIAutomation-formwork\\common\\basics.py\", line 349, in get_texts\n    element = self.find_elements(locator)[n]\n",
-                "TypeError: 'bool' object is not subscriptable\n",
-                "\nDuring handling of the above exception, another exception occurred:\n\n",
-                "Traceback (most recent call last):\n",
-                "  File \"D:\\python\\lib\\unittest\\case.py\", line 59, in testPartExecutor\n    yield\n",
-                "  File \"D:\\python\\lib\\unittest\\case.py\", line 605, in run\n    testMethod()\n",
-                "  File \"D:\\python\\lib\\site-packages\\BeautifulReport\\BeautifulReport.py\", line 430, in __wrap\n    data = BeautifulReport.img2base(img_path, pargs[0] + '.png')\n",
-                "  File \"D:\\python\\lib\\site-packages\\BeautifulReport\\BeautifulReport.py\", line 406, in img2base\n    with open(img_path + pattern + file_name, 'rb') as file:\n",
-                "FileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\img\\\\test_login.png'\n"
+                "\u001b[32m[2019-11-06 16:27:09,751] [logger.py:98] [logger:__console] [INFO]- 打开网页成功！\u001b[0m",
+                "<br></br>",
+                ""
             ]
         },
         {
             "className": "TestLogin_0",
             "methodName": "test_upload",
             "description": null,
-            "spendTime": "8.04 s",
-            "status": "错误",
+            "spendTime": "16.9 s",
+            "status": "成功",
             "log": [
-                "\u001b[32m[2019-11-06 13:42:16,418] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x04BFF9B0>页面中未能找到元素('xpath', '//div[@class=\"menuContainer___2WW7T\"]/div/ul/li')\u001b[0m\n",
-                "Traceback (most recent call last):\n",
-                "  File \"D:\\python\\lib\\unittest\\case.py\", line 59, in testPartExecutor\n    yield\n",
-                "  File \"D:\\python\\lib\\unittest\\case.py\", line 605, in run\n    testMethod()\n",
-                "  File \"D:\\UIAutomation-formwork\\case\\test_login.py\", line 53, in test_upload\n    login.clicks_tag(4)\n",
-                "  File \"D:\\UIAutomation-formwork\\page\\login_page.py\", line 35, in clicks_tag\n    self.clicks(self.tag_loc, n)\n",
-                "  File \"D:\\UIAutomation-formwork\\common\\basics.py\", line 161, in clicks\n    element = self.find_elements(locator)[n]\n",
-                "TypeError: 'bool' object is not subscriptable\n"
+                "\u001b[32m[2019-11-06 16:27:20,733] [logger.py:98] [logger:__console] [INFO]- 开始上传图片...\u001b[0m",
+                "\u001b[32m[2019-11-06 16:27:22,901] [logger.py:98] [logger:__console] [INFO]- 上传图片成功... D:\\UIAutomation-formwork\\driver\\upload.exe,D:\\UIAutomation-formwork\\data\\img\\26.jpg\u001b[0m",
+                ""
             ]
         }
     ],
     "testName": "UI自动化测试",
     "testAll": 2,
     "testFail": 0,
-    "testError": 2,
-    "beginTime": "2019-11-06 13:41:54",
-    "totalTime": "26s",
+    "testError": 0,
+    "beginTime": "2019-11-06 16:27:01",
+    "totalTime": "27s",
     "testSkip": 0
 };
     function details(obj) {

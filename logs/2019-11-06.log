@@ -1,190 +1,105 @@
-[32m[2019-11-06 11:35:57,532] [logger.py:103] [logger:__console] [INFO]- start browser name :Chrome[0m
-[32m[2019-11-06 11:36:06,009] [logger.py:103] [logger:__console] [INFO]- 打开网页成功！[0m
-[32m[2019-11-06 11:36:18,005] [logger.py:103] [logger:__console] [INFO]- start browser name :Firefox[0m
-[31m[2019-11-06 11:36:18,006] [logger.py:109] [logger:__console] [ERROR]- 浏览器出错了呀！文件路径：D:\UIAutomation-formwork\driver\geckodriver.exe 不存在，请检查并添加.[0m
-[32m[2019-11-06 11:38:02,976] [logger.py:103] [logger:__console] [INFO]- start browser name :Firefox[0m
-[31m[2019-11-06 11:38:02,977] [logger.py:109] [logger:__console] [ERROR]- 浏览器出错了呀！文件路径：D:\UIAutomation-formwork\driver\geckodriver.exe 不存在，请检查并添加.[0m
-[32m[2019-11-06 11:38:11,001] [logger.py:103] [logger:__console] [INFO]- start browser name :Firefox[0m
-[31m[2019-11-06 11:38:11,001] [logger.py:109] [logger:__console] [ERROR]- 浏览器出错了呀！文件路径：D:\UIAutomation-formwork\driver\geckodriver.exe 不存在，请检查并添加.[0m
-[32m[2019-11-06 11:39:28,982] [logger.py:103] [logger:__console] [INFO]- start browser name :Firefox[0m
-[31m[2019-11-06 11:39:28,983] [logger.py:109] [logger:__console] [ERROR]- 浏览器出错了呀！文件路径：D:\UIAutomation-formwork\driver\geckodriver.exe 不存在，请检查并添加.[0m
-[36m[2019-11-06 11:56:52,511] [logger.py:133] [logger:__console] [DEBUG]- ---测试开始----[0m
-[32m[2019-11-06 11:56:52,512] [logger.py:131] [logger:__console] [INFO]- 操作步骤[0m
-[33m[2019-11-06 11:56:52,512] [logger.py:135] [logger:__console] [WARNING]- ----测试结束----[0m
-[31m[2019-11-06 11:56:52,512] [logger.py:137] [logger:__console] [ERROR]- ----测试错误----[0m
-[36m[2019-11-06 11:57:20,039] [logger.py:133] [logger:__console] [DEBUG]- ---测试开始----[0m
-[32m[2019-11-06 11:57:20,039] [logger.py:131] [logger:__console] [INFO]- 操作步骤[0m
-[33m[2019-11-06 11:57:20,040] [logger.py:135] [logger:__console] [WARNING]- ----测试结束----[0m
-[31m[2019-11-06 11:57:20,040] [logger.py:137] [logger:__console] [ERROR]- ----测试错误----[0m
-[36m[2019-11-06 11:57:38,474] [logger.py:133] [logger:__console] [DEBUG]- ---测试开始----[0m
-[32m[2019-11-06 11:57:38,475] [logger.py:131] [logger:__console] [INFO]- 操作步骤[0m
-[33m[2019-11-06 11:57:38,475] [logger.py:135] [logger:__console] [WARNING]- ----测试结束----[0m
-[31m[2019-11-06 11:57:38,475] [logger.py:137] [logger:__console] [ERROR]- ----测试错误----[0m
-[36m[2019-11-06 11:57:48,566] [logger.py:133] [logger:__console] [DEBUG]- ---测试开始----[0m
-[32m[2019-11-06 11:57:48,566] [logger.py:131] [logger:__console] [INFO]- 操作步骤[0m
-[33m[2019-11-06 11:57:48,566] [logger.py:135] [logger:__console] [WARNING]- ----测试结束----[0m
-[31m[2019-11-06 11:57:48,567] [logger.py:137] [logger:__console] [ERROR]- ----测试错误----[0m
-[36m[2019-11-06 12:00:58,091] [logger.py:121] [logger:__console] [DEBUG]- ---测试开始----[0m
-[32m[2019-11-06 12:00:58,091] [logger.py:119] [logger:__console] [INFO]- 操作步骤[0m
-[33m[2019-11-06 12:00:58,091] [logger.py:123] [logger:__console] [WARNING]- ----测试结束----[0m
-[31m[2019-11-06 12:00:58,092] [logger.py:125] [logger:__console] [ERROR]- ----测试错误----[0m
-[36m[2019-11-06 12:03:09,529] [logger.py:123] [logger:__console] [DEBUG]- ---测试开始----[0m
-[32m[2019-11-06 12:03:09,529] [logger.py:121] [logger:__console] [INFO]- 操作步骤[0m
-[33m[2019-11-06 12:03:09,529] [logger.py:125] [logger:__console] [WARNING]- ----测试结束----[0m
-[31m[2019-11-06 12:03:09,530] [logger.py:127] [logger:__console] [ERROR]- ----测试错误----[0m
-[36m[2019-11-06 12:10:02,171] [logger.py:99] [logger:__console] [DEBUG]- ---测试开始----[0m
-[32m[2019-11-06 12:10:02,171] [logger.py:97] [logger:__console] [INFO]- 操作步骤[0m
-[33m[2019-11-06 12:10:02,172] [logger.py:101] [logger:__console] [WARNING]- ----测试结束----[0m
-[31m[2019-11-06 12:10:02,172] [logger.py:103] [logger:__console] [ERROR]- ----测试错误----[0m
-
-
-
-
-
-
-
-
-
-
-[36m[2019-11-06 12:10:24,761] [logger.py:99] [logger:__console] [DEBUG]- ---测试开始----[0m
-[32m[2019-11-06 12:10:24,761] [logger.py:97] [logger:__console] [INFO]- 操作步骤[0m
-[33m[2019-11-06 12:10:24,762] [logger.py:101] [logger:__console] [WARNING]- ----测试结束----[0m
-[31m[2019-11-06 12:10:24,762] [logger.py:103] [logger:__console] [ERROR]- ----测试错误----[0m
-[36m[2019-11-06 12:11:12,455] [logger.py:97] [logger:__console] [DEBUG]- ---测试开始----[0m
-[32m[2019-11-06 12:11:12,456] [logger.py:95] [logger:__console] [INFO]- 操作步骤[0m
-[33m[2019-11-06 12:11:12,456] [logger.py:99] [logger:__console] [WARNING]- ----测试结束----[0m
-[31m[2019-11-06 12:11:12,456] [logger.py:101] [logger:__console] [ERROR]- ----测试错误----[0m
-[32m[2019-11-06 13:00:18,251] [logger.py:95] [logger:__console] [INFO]- 测试用例：<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<paramunittest.TestLogin_0 testMethod=test_login>, <paramunittest.TestLogin_0 testMethod=test_upload>]>]>]>[0m
-[32m[2019-11-06 13:00:18,254] [logger.py:95] [logger:__console] [INFO]- start browser name :Chrome[0m
-[32m[2019-11-06 13:00:26,559] [logger.py:95] [logger:__console] [INFO]- 打开网页成功！[0m
-[32m[2019-11-06 13:00:37,252] [logger.py:95] [logger:__console] [INFO]- 开始上传视频...[0m
-[32m[2019-11-06 13:00:37,265] [logger.py:95] [logger:__console] [INFO]- 上传视频成功... video.mp4[0m
-[32m[2019-11-06 13:00:46,363] [logger.py:95] [logger:__console] [INFO]- 执行用例，生成HTML报告![0m
-[32m[2019-11-06 13:02:30,880] [logger.py:95] [logger:__console] [INFO]- 测试用例：<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<paramunittest.TestLogin_0 testMethod=test_login>, <paramunittest.TestLogin_0 testMethod=test_upload>]>]>]>[0m
-[32m[2019-11-06 13:02:30,883] [logger.py:95] [logger:__console] [INFO]- start browser name :Chrome[0m
-[32m[2019-11-06 13:02:39,132] [logger.py:95] [logger:__console] [INFO]- 打开网页成功！[0m
-[32m[2019-11-06 13:02:49,746] [logger.py:95] [logger:__console] [INFO]- 开始上传视频...[0m
-[32m[2019-11-06 13:02:49,759] [logger.py:95] [logger:__console] [INFO]- 上传视频成功... video.mp4[0m
-[32m[2019-11-06 13:02:58,844] [logger.py:95] [logger:__console] [INFO]- 执行用例，生成HTML报告![0m
-[32m[2019-11-06 13:03:21,459] [logger.py:95] [logger:__console] [INFO]- 测试用例：<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<paramunittest.TestLogin_0 testMethod=test_login>, <paramunittest.TestLogin_0 testMethod=test_upload>]>]>]>[0m
-[32m[2019-11-06 13:03:21,462] [logger.py:95] [logger:__console] [INFO]- start browser name :Chrome[0m
-[32m[2019-11-06 13:03:29,810] [logger.py:95] [logger:__console] [INFO]- 打开网页成功！[0m
-[32m[2019-11-06 13:03:40,442] [logger.py:95] [logger:__console] [INFO]- 开始上传视频...[0m
-[32m[2019-11-06 13:03:40,455] [logger.py:95] [logger:__console] [INFO]- 上传视频成功... video.mp4[0m
-[32m[2019-11-06 13:03:45,477] [logger.py:95] [logger:__console] [INFO]- 执行用例，生成HTML报告![0m
-[32m[2019-11-06 13:04:42,599] [logger.py:95] [logger:__console] [INFO]- 开始上传图片...[0m
-[32m[2019-11-06 13:04:42,610] [logger.py:95] [logger:__console] [INFO]- 上传图片成功... 18.jpg[0m
-[32m[2019-11-06 13:05:11,479] [logger.py:95] [logger:__console] [INFO]- 开始上传图片...[0m
-[32m[2019-11-06 13:05:11,490] [logger.py:95] [logger:__console] [INFO]- 上传图片成功... 7.jpg[0m
-[32m[2019-11-06 13:05:21,055] [logger.py:95] [logger:__console] [INFO]- 测试用例：<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<paramunittest.TestLogin_0 testMethod=test_login>, <paramunittest.TestLogin_0 testMethod=test_upload>]>]>]>[0m
-[32m[2019-11-06 13:05:21,058] [logger.py:95] [logger:__console] [INFO]- start browser name :Chrome[0m
-[32m[2019-11-06 13:05:29,324] [logger.py:95] [logger:__console] [INFO]- 打开网页成功！[0m
-[32m[2019-11-06 13:05:39,952] [logger.py:95] [logger:__console] [INFO]- 开始上传视频...[0m
-[32m[2019-11-06 13:05:39,964] [logger.py:95] [logger:__console] [INFO]- 上传视频成功... video.mp4[0m
-[32m[2019-11-06 13:05:44,974] [logger.py:95] [logger:__console] [INFO]- 执行用例，生成HTML报告![0m
-[32m[2019-11-06 13:07:37,672] [logger.py:95] [logger:__console] [INFO]- 测试用例：<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<paramunittest.TestLogin_0 testMethod=test_login>, <paramunittest.TestLogin_0 testMethod=test_upload>]>]>]>[0m
-[32m[2019-11-06 13:07:37,675] [logger.py:95] [logger:__console] [INFO]- start browser name :Chrome[0m
-[32m[2019-11-06 13:07:45,901] [logger.py:95] [logger:__console] [INFO]- 打开网页成功！[0m
-[32m[2019-11-06 13:07:56,527] [logger.py:95] [logger:__console] [INFO]- 开始上传视频...[0m
-[32m[2019-11-06 13:07:59,278] [logger.py:95] [logger:__console] [INFO]- 上传视频成功... video.mp4[0m
-[32m[2019-11-06 13:08:04,290] [logger.py:95] [logger:__console] [INFO]- 执行用例，生成HTML报告![0m
-[32m[2019-11-06 13:09:20,038] [logger.py:95] [logger:__console] [INFO]- 测试用例：<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<paramunittest.TestLogin_0 testMethod=test_login>, <paramunittest.TestLogin_0 testMethod=test_upload>]>]>]>[0m
-[32m[2019-11-06 13:09:20,040] [logger.py:95] [logger:__console] [INFO]- start browser name :Chrome[0m
-[32m[2019-11-06 13:09:28,327] [logger.py:95] [logger:__console] [INFO]- 打开网页成功！[0m
-[32m[2019-11-06 13:09:38,610] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x04060950>页面中未能找到元素('xpath', '//div[@class="menuContainer___2WW7T"]/div/ul/li/a/span')[0m
-[32m[2019-11-06 13:09:52,228] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x04060950>页面中未能找到元素('xpath', '//div[@class="menuContainer___2WW7T"]/div/ul/li')[0m
-[32m[2019-11-06 13:09:52,239] [logger.py:95] [logger:__console] [INFO]- 执行用例，生成HTML报告![0m
-[32m[2019-11-06 13:11:02,722] [logger.py:95] [logger:__console] [INFO]- 测试用例：<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<paramunittest.TestLogin_0 testMethod=test_login>, <paramunittest.TestLogin_0 testMethod=test_upload>]>]>]>[0m
-[32m[2019-11-06 13:11:02,725] [logger.py:95] [logger:__console] [INFO]- start browser name :Chrome[0m
-[32m[2019-11-06 13:11:11,035] [logger.py:95] [logger:__console] [INFO]- 打开网页成功！[0m
-[32m[2019-11-06 13:11:21,339] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x04130990>页面中未能找到元素('xpath', '//div[@class="menuContainer___2WW7T"]/div/ul/li/a/span')[0m
-[32m[2019-11-06 13:11:34,924] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x04130990>页面中未能找到元素('xpath', '//div[@class="menuContainer___2WW7T"]/div/ul/li')[0m
-[32m[2019-11-06 13:11:39,245] [logger.py:95] [logger:__console] [INFO]- 执行用例，生成HTML报告![0m
-[36m[2019-11-06 13:12:13,415] [logger.py:97] [logger:__console] [DEBUG]- ---测试开始----[0m
-[32m[2019-11-06 13:12:13,415] [logger.py:95] [logger:__console] [INFO]- 操作步骤[0m
-[33m[2019-11-06 13:12:13,416] [logger.py:99] [logger:__console] [WARNING]- ----测试结束----[0m
-[31m[2019-11-06 13:12:13,416] [logger.py:101] [logger:__console] [ERROR]- ----测试错误----[0m
-[32m[2019-11-06 13:12:21,109] [logger.py:95] [logger:__console] [INFO]- 测试用例：<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<paramunittest.TestLogin_0 testMethod=test_login>, <paramunittest.TestLogin_0 testMethod=test_upload>]>]>]>[0m
-[32m[2019-11-06 13:12:21,113] [logger.py:95] [logger:__console] [INFO]- start browser name :Chrome[0m
-[32m[2019-11-06 13:12:31,150] [logger.py:95] [logger:__console] [INFO]- 打开网页成功！[0m
-[32m[2019-11-06 13:12:41,448] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x04B6F9D0>页面中未能找到元素('xpath', '//div[@class="menuContainer___2WW7T"]/div/ul/li/a/span')[0m
-[32m[2019-11-06 13:12:55,050] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x04B6F9D0>页面中未能找到元素('xpath', '//div[@class="menuContainer___2WW7T"]/div/ul/li')[0m
-[32m[2019-11-06 13:12:59,376] [logger.py:95] [logger:__console] [INFO]- 执行用例，生成HTML报告![0m
-[32m[2019-11-06 13:16:35,432] [logger.py:95] [logger:__console] [INFO]- 测试用例：<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<paramunittest.TestLogin_0 testMethod=test_login>, <paramunittest.TestLogin_0 testMethod=test_upload>]>]>]>[0m
-[32m[2019-11-06 13:16:35,435] [logger.py:95] [logger:__console] [INFO]- start browser name :Chrome[0m
-[32m[2019-11-06 13:16:43,725] [logger.py:95] [logger:__console] [INFO]- 打开网页成功！[0m
-[32m[2019-11-06 13:16:54,023] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x0456F970>页面中未能找到元素('xpath', '//div[@class="menuContainer___2WW7T"]/div/ul/li/a/span')[0m
-[32m[2019-11-06 13:17:07,607] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x0456F970>页面中未能找到元素('xpath', '//div[@class="menuContainer___2WW7T"]/div/ul/li')[0m
-[32m[2019-11-06 13:17:11,930] [logger.py:95] [logger:__console] [INFO]- 执行用例，生成HTML报告![0m
-[32m[2019-11-06 13:24:41,891] [logger.py:95] [logger:__console] [INFO]- 测试用例：<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<paramunittest.TestLogin_0 testMethod=test_login>, <paramunittest.TestLogin_0 testMethod=test_upload>]>]>]>[0m
-[32m[2019-11-06 13:24:41,894] [logger.py:95] [logger:__console] [INFO]- start browser name :Chrome[0m
-[32m[2019-11-06 13:24:50,147] [logger.py:95] [logger:__console] [INFO]- 打开网页成功！[0m
-[32m[2019-11-06 13:25:00,437] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x045EF970>页面中未能找到元素('xpath', '//div[@class="menuContainer___2WW7T"]/div/ul/li/a/span')[0m
-[32m[2019-11-06 13:25:14,044] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x045EF970>页面中未能找到元素('xpath', '//div[@class="menuContainer___2WW7T"]/div/ul/li')[0m
-[32m[2019-11-06 13:25:18,401] [logger.py:95] [logger:__console] [INFO]- 执行用例，生成HTML报告![0m
-[32m[2019-11-06 13:28:41,904] [logger.py:95] [logger:__console] [INFO]- 测试用例：<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<paramunittest.TestLogin_0 testMethod=test_login>, <paramunittest.TestLogin_0 testMethod=test_upload>]>]>]>[0m
-[32m[2019-11-06 13:28:41,907] [logger.py:95] [logger:__console] [INFO]- start browser name :Chrome[0m
-[32m[2019-11-06 13:28:50,943] [logger.py:95] [logger:__console] [INFO]- 打开网页成功！[0m
-[32m[2019-11-06 13:29:01,260] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x047EF990>页面中未能找到元素('xpath', '//div[@class="menuContainer___2WW7T"]/div/ul/li/a/span')[0m
-[32m[2019-11-06 13:29:14,864] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x047EF990>页面中未能找到元素('xpath', '//div[@class="menuContainer___2WW7T"]/div/ul/li')[0m
-[32m[2019-11-06 13:29:19,222] [logger.py:95] [logger:__console] [INFO]- 执行用例，生成HTML报告![0m
-[32m[2019-11-06 13:36:33,278] [logger.py:95] [logger:__console] [INFO]- 测试用例：<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<paramunittest.TestLogin_0 testMethod=test_login>, <paramunittest.TestLogin_0 testMethod=test_upload>]>]>]>[0m
-[32m[2019-11-06 13:36:33,281] [logger.py:95] [logger:__console] [INFO]- start browser name :Chrome[0m
-[32m[2019-11-06 13:36:41,654] [logger.py:95] [logger:__console] [INFO]- 打开网页成功！[0m
-[32m[2019-11-06 13:36:51,964] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x04B8F9D0>页面中未能找到元素('xpath', '//div[@class="menuContainer___2WW7T"]/div/ul/li/a/span')[0m
-[32m[2019-11-06 13:37:05,564] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x04B8F9D0>页面中未能找到元素('xpath', '//div[@class="menuContainer___2WW7T"]/div/ul/li')[0m
-[32m[2019-11-06 13:37:09,892] [logger.py:95] [logger:__console] [INFO]- 执行用例，生成HTML报告![0m
-[32m[2019-11-06 13:39:22,402] [logger.py:95] [logger:__console] [INFO]- 测试用例：<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<paramunittest.TestLogin_0 testMethod=test_login>, <paramunittest.TestLogin_0 testMethod=test_upload>]>]>]>[0m
-[32m[2019-11-06 13:39:22,405] [logger.py:95] [logger:__console] [INFO]- start browser name :Chrome[0m
-[32m[2019-11-06 13:39:30,661] [logger.py:95] [logger:__console] [INFO]- 打开网页成功！[0m
-[32m[2019-11-06 13:39:35,944] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x0447F990>页面中未能找到元素('xpath', '//div[@class="menuContainer___2WW7T"]/div/ul/li/a/span')[0m
-[32m[2019-11-06 13:39:44,527] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x0447F990>页面中未能找到元素('xpath', '//div[@class="menuContainer___2WW7T"]/div/ul/li')[0m
-[32m[2019-11-06 13:39:48,866] [logger.py:95] [logger:__console] [INFO]- 执行用例，生成HTML报告![0m
-[32m[2019-11-06 13:40:07,542] [logger.py:95] [logger:__console] [INFO]- 测试用例：<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<paramunittest.TestLogin_0 testMethod=test_login>, <paramunittest.TestLogin_0 testMethod=test_upload>]>]>]>[0m
-[32m[2019-11-06 13:40:07,545] [logger.py:95] [logger:__console] [INFO]- start browser name :Chrome[0m
-[32m[2019-11-06 13:40:15,895] [logger.py:95] [logger:__console] [INFO]- 打开网页成功！[0m
-[32m[2019-11-06 13:40:21,195] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x042EE9D0>页面中未能找到元素('xpath', '//div[@class="menuContainer___2WW7T"]/div/ul/li/a/span')[0m
-[32m[2019-11-06 13:40:29,780] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x042EE9D0>页面中未能找到元素('xpath', '//div[@class="menuContainer___2WW7T"]/div/ul/li')[0m
-[32m[2019-11-06 13:40:34,106] [logger.py:95] [logger:__console] [INFO]- 执行用例，生成HTML报告![0m
-[32m[2019-11-06 13:41:54,262] [logger.py:95] [logger:__console] [INFO]- 测试用例：<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<paramunittest.TestLogin_0 testMethod=test_login>, <paramunittest.TestLogin_0 testMethod=test_upload>]>]>]>[0m
-[32m[2019-11-06 13:41:54,265] [logger.py:95] [logger:__console] [INFO]- start browser name :Chrome[0m
-[32m[2019-11-06 13:42:02,570] [logger.py:95] [logger:__console] [INFO]- 打开网页成功！[0m
-[32m[2019-11-06 13:42:07,859] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x04BFF9B0>页面中未能找到元素('xpath', '//div[@class="menuContainer___2WW7T"]/div/ul/li/a/span')[0m
-[32m[2019-11-06 13:42:16,418] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x04BFF9B0>页面中未能找到元素('xpath', '//div[@class="menuContainer___2WW7T"]/div/ul/li')[0m
-[32m[2019-11-06 13:42:20,743] [logger.py:95] [logger:__console] [INFO]- 执行用例，生成HTML报告![0m
-[32m[2019-11-06 13:43:37,743] [logger.py:95] [logger:__console] [INFO]- 测试用例：<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<paramunittest.TestLogin_0 testMethod=test_login>, <paramunittest.TestLogin_0 testMethod=test_upload>]>]>]>[0m
-[32m[2019-11-06 13:43:37,746] [logger.py:95] [logger:__console] [INFO]- start browser name :Chrome[0m
-[32m[2019-11-06 13:43:46,052] [logger.py:95] [logger:__console] [INFO]- 打开网页成功！[0m
-[32m[2019-11-06 13:43:51,357] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x046AF9B0>页面中未能找到元素('xpath', '//div[@class="menuContainer___2WW7T"]/div/ul/li/a/span')[0m
-[32m[2019-11-06 13:43:59,951] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x046AF9B0>页面中未能找到元素('xpath', '//div[@class="menuContainer___2WW7T"]/div/ul/li')[0m
-[32m[2019-11-06 13:44:04,320] [logger.py:95] [logger:__console] [INFO]- 执行用例，生成HTML报告![0m
-[32m[2019-11-06 13:47:54,863] [logger.py:95] [logger:__console] [INFO]- 测试用例：<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<paramunittest.TestLogin_0 testMethod=test_login>, <paramunittest.TestLogin_0 testMethod=test_upload>]>]>]>[0m
-[32m[2019-11-06 13:47:54,866] [logger.py:95] [logger:__console] [INFO]- start browser name :Chrome[0m
-[32m[2019-11-06 13:48:03,169] [logger.py:95] [logger:__console] [INFO]- 打开网页成功！[0m
-[32m[2019-11-06 13:48:08,450] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x043FF9B0>页面中未能找到元素('xpath', '//div[@class="menuContainer___2WW7T"]/div/ul/li/a/span')[0m
-[32m[2019-11-06 13:48:17,018] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x043FF9B0>页面中未能找到元素('xpath', '//div[@class="menuContainer___2WW7T"]/div/ul/li')[0m
-[32m[2019-11-06 13:48:21,352] [logger.py:95] [logger:__console] [INFO]- 执行用例，生成HTML报告![0m
-[32m[2019-11-06 13:49:58,032] [logger.py:95] [logger:__console] [INFO]- 测试用例：<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<paramunittest.TestLogin_0 testMethod=test_login>, <paramunittest.TestLogin_0 testMethod=test_upload>]>]>]>[0m
-[32m[2019-11-06 13:49:58,035] [logger.py:95] [logger:__console] [INFO]- start browser name :Chrome[0m
-[32m[2019-11-06 13:50:06,328] [logger.py:95] [logger:__console] [INFO]- 打开网页成功！[0m
-[32m[2019-11-06 13:50:11,604] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x04B4F970>页面中未能找到元素('xpath', '//div[@class="menuContainer___2WW7T"]/div/ul/li/a/span')[0m
-[32m[2019-11-06 13:50:20,195] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x04B4F970>页面中未能找到元素('xpath', '//div[@class="menuContainer___2WW7T"]/div/ul/li')[0m
-[32m[2019-11-06 13:50:24,519] [logger.py:95] [logger:__console] [INFO]- 执行用例，生成HTML报告![0m
-[32m[2019-11-06 13:52:47,969] [logger.py:95] [logger:__console] [INFO]- 测试用例：<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<paramunittest.TestLogin_0 testMethod=test_login>, <paramunittest.TestLogin_0 testMethod=test_upload>]>]>]>[0m
-[32m[2019-11-06 13:52:47,972] [logger.py:95] [logger:__console] [INFO]- start browser name :Chrome[0m
-[32m[2019-11-06 13:52:56,428] [logger.py:95] [logger:__console] [INFO]- 打开网页成功！[0m
-[32m[2019-11-06 13:53:01,757] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x03E9F9B0>页面中未能找到元素('xpath', '//div[@class="menuContainer___2WW7T"]/div/ul/li/a/span')[0m
-[32m[2019-11-06 13:53:10,352] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x03E9F9B0>页面中未能找到元素('xpath', '//div[@class="menuContainer___2WW7T"]/div/ul/li')[0m
-[32m[2019-11-06 13:53:14,674] [logger.py:95] [logger:__console] [INFO]- 执行用例，生成HTML报告![0m
-[32m[2019-11-06 13:54:11,134] [logger.py:95] [logger:__console] [INFO]- 测试用例：<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<paramunittest.TestLogin_0 testMethod=test_login>, <paramunittest.TestLogin_0 testMethod=test_upload>]>]>]>[0m
-[32m[2019-11-06 13:54:11,138] [logger.py:95] [logger:__console] [INFO]- start browser name :Chrome[0m
-[32m[2019-11-06 13:54:19,429] [logger.py:95] [logger:__console] [INFO]- 打开网页成功！[0m
-[32m[2019-11-06 13:54:24,730] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x03E9F9B0>页面中未能找到元素('xpath', '//div[@class="menuContainer___2WW7T"]/div/ul/li/a/span')[0m
-[32m[2019-11-06 13:54:33,309] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x03E9F9B0>页面中未能找到元素('xpath', '//div[@class="menuContainer___2WW7T"]/div/ul/li')[0m
-[32m[2019-11-06 13:54:37,644] [logger.py:95] [logger:__console] [INFO]- 执行用例，生成HTML报告![0m
-[32m[2019-11-06 14:04:21,791] [logger.py:95] [logger:__console] [INFO]- 测试用例：<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<paramunittest.TestLogin_0 testMethod=test_login>, <paramunittest.TestLogin_0 testMethod=test_upload>]>]>]>[0m
-[32m[2019-11-06 14:04:21,794] [logger.py:95] [logger:__console] [INFO]- start browser name :Chrome[0m
-[32m[2019-11-06 14:04:30,065] [logger.py:95] [logger:__console] [INFO]- 打开网页成功！[0m
-[32m[2019-11-06 14:04:35,343] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x0426F9D0>页面中未能找到元素('xpath', '//div[@class="menuContainer___2WW7T"]/div/ul/li/a/span')[0m
-[32m[2019-11-06 14:04:43,933] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x0426F9D0>页面中未能找到元素('xpath', '//div[@class="menuContainer___2WW7T"]/div/ul/li')[0m
-[32m[2019-11-06 14:04:48,292] [logger.py:95] [logger:__console] [INFO]- 执行用例，生成HTML报告![0m
+[32m[2019-11-06 16:01:28,126] [logger.py:98] [logger:__console] [INFO]- 测试用例：<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<paramunittest.TestLogin_0 testMethod=test_login>, <paramunittest.TestLogin_0 testMethod=test_upload>]>]>]>[0m
+[32m[2019-11-06 16:01:28,128] [logger.py:98] [logger:__console] [INFO]- start browser name :Chrome[0m
+[32m[2019-11-06 16:01:36,724] [logger.py:98] [logger:__console] [INFO]- 打开网页成功！[0m
+[32m[2019-11-06 16:01:47,648] [logger.py:98] [logger:__console] [INFO]- 开始上传视频...[0m
+[32m[2019-11-06 16:01:49,780] [logger.py:98] [logger:__console] [INFO]- 上传视频成功... D:\UIAutomation-formwork\driver\upload.exe,D:\UIAutomation-formwork\data\video.mp4[0m
+[32m[2019-11-06 16:01:54,827] [logger.py:98] [logger:__console] [INFO]- 执行用例，生成HTML报告![0m
+[32m[2019-11-06 16:08:50,795] [logger.py:98] [logger:__console] [INFO]- 测试用例：<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<paramunittest.TestLogin_0 testMethod=test_login>, <paramunittest.TestLogin_0 testMethod=test_upload>]>]>]>[0m
+[32m[2019-11-06 16:08:50,797] [logger.py:98] [logger:__console] [INFO]- start browser name :Chrome[0m
+[32m[2019-11-06 16:08:59,292] [logger.py:98] [logger:__console] [INFO]- 打开网页成功！[0m
+[32m[2019-11-06 16:09:07,923] [logger.py:98] [logger:__console] [INFO]- 执行用例，生成HTML报告![0m
+[32m[2019-11-06 16:10:25,163] [logger.py:98] [logger:__console] [INFO]- 测试用例：<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<paramunittest.TestLogin_0 testMethod=test_login>, <paramunittest.TestLogin_0 testMethod=test_upload>]>]>]>[0m
+[32m[2019-11-06 16:10:25,165] [logger.py:98] [logger:__console] [INFO]- start browser name :Chrome[0m
+[32m[2019-11-06 16:10:33,754] [logger.py:98] [logger:__console] [INFO]- 打开网页成功！[0m
+[32m[2019-11-06 16:10:44,706] [logger.py:98] [logger:__console] [INFO]- 开始上传图片...[0m
+[32m[2019-11-06 16:10:46,849] [logger.py:98] [logger:__console] [INFO]- 上传图片成功... 26.jpg[0m
+[32m[2019-11-06 16:10:52,090] [logger.py:98] [logger:__console] [INFO]- 执行用例，生成HTML报告![0m
+[32m[2019-11-06 16:13:28,128] [logger.py:98] [logger:__console] [INFO]- 测试用例：<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<paramunittest.TestLogin_0 testMethod=test_login>, <paramunittest.TestLogin_0 testMethod=test_upload>]>]>]>[0m
+[32m[2019-11-06 16:13:28,130] [logger.py:98] [logger:__console] [INFO]- start browser name :Chrome[0m
+[32m[2019-11-06 16:13:36,656] [logger.py:98] [logger:__console] [INFO]- 打开网页成功！[0m
+[32m[2019-11-06 16:13:47,511] [logger.py:98] [logger:__console] [INFO]- 开始上传图片...[0m
+[32m[2019-11-06 16:13:49,625] [logger.py:98] [logger:__console] [INFO]- 上传图片成功... 56.jpg[0m
+[32m[2019-11-06 16:13:54,794] [logger.py:98] [logger:__console] [INFO]- 执行用例，生成HTML报告![0m
+[32m[2019-11-06 16:27:01,193] [logger.py:98] [logger:__console] [INFO]- 测试用例：<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<paramunittest.TestLogin_0 testMethod=test_login>, <paramunittest.TestLogin_0 testMethod=test_upload>]>]>]>[0m
+[32m[2019-11-06 16:27:01,195] [logger.py:98] [logger:__console] [INFO]- start browser name :Chrome[0m
+[32m[2019-11-06 16:27:09,751] [logger.py:98] [logger:__console] [INFO]- 打开网页成功！[0m
+[32m[2019-11-06 16:27:20,733] [logger.py:98] [logger:__console] [INFO]- 开始上传图片...[0m
+[32m[2019-11-06 16:27:22,901] [logger.py:98] [logger:__console] [INFO]- 上传图片成功... D:\UIAutomation-formwork\driver\upload.exe,D:\UIAutomation-formwork\data\img\26.jpg[0m
+[32m[2019-11-06 16:27:28,106] [logger.py:98] [logger:__console] [INFO]- 执行用例，生成HTML报告![0m
+[32m[2019-11-06 16:31:20,594] [logger.py:98] [logger:__console] [INFO]- start browser name :Chrome[0m
+[32m[2019-11-06 16:31:29,121] [logger.py:98] [logger:__console] [INFO]- 打开网页成功！[0m
+[32m[2019-11-06 16:31:40,018] [logger.py:98] [logger:__console] [INFO]- 开始上传图片...[0m
+[32m[2019-11-06 16:31:42,147] [logger.py:98] [logger:__console] [INFO]- 上传图片成功... D:\UIAutomation-formwork\driver\upload.exe,D:\UIAutomation-formwork\data\img\28.jpg[0m
+[32m[2019-11-06 16:36:22,856] [logger.py:98] [logger:__console] [INFO]- start browser name :Chrome[0m
+[32m[2019-11-06 16:36:31,376] [logger.py:98] [logger:__console] [INFO]- 打开网页成功！[0m
+[32m[2019-11-06 16:36:42,267] [logger.py:98] [logger:__console] [INFO]- 开始上传图片...[0m
+[32m[2019-11-06 16:36:44,339] [logger.py:98] [logger:__console] [INFO]- 上传图片成功... D:\UIAutomation-formwork\driver\upload.exe,D:\UIAutomation-formwork\data\img\16.jpg[0m
+[32m[2019-11-06 16:36:57,268] [logger.py:98] [logger:__console] [INFO]- start browser name :Chrome[0m
+[32m[2019-11-06 16:37:05,641] [logger.py:98] [logger:__console] [INFO]- 打开网页成功！[0m
+[32m[2019-11-06 16:37:16,666] [logger.py:98] [logger:__console] [INFO]- 开始上传图片...[0m
+[32m[2019-11-06 16:37:18,773] [logger.py:98] [logger:__console] [INFO]- 上传图片成功... D:\UIAutomation-formwork\driver\upload.exe,D:\UIAutomation-formwork\data\img\0.jpg[0m
+[32m[2019-11-06 16:39:56,193] [logger.py:98] [logger:__console] [INFO]- start browser name :Chrome[0m
+[32m[2019-11-06 16:40:04,803] [logger.py:98] [logger:__console] [INFO]- 打开网页成功！[0m
+[32m[2019-11-06 16:40:15,871] [logger.py:98] [logger:__console] [INFO]- 开始上传图片...[0m
+[32m[2019-11-06 16:41:05,506] [logger.py:98] [logger:__console] [INFO]- start browser name :Chrome[0m
+[32m[2019-11-06 16:41:14,027] [logger.py:98] [logger:__console] [INFO]- 打开网页成功！[0m
+[32m[2019-11-06 16:41:24,851] [logger.py:98] [logger:__console] [INFO]- 开始上传图片...[0m
+[32m[2019-11-06 16:41:26,948] [logger.py:98] [logger:__console] [INFO]- 上传图片成功... D:\UIAutomation-formwork\driver\upload.exe,D:\UIAutomation-formwork\data\img\28.jpg[0m
+[32m[2019-11-06 16:47:02,071] [logger.py:98] [logger:__console] [INFO]- start browser name :Chrome[0m
+[32m[2019-11-06 16:47:10,674] [logger.py:98] [logger:__console] [INFO]- 打开网页成功！[0m
+[32m[2019-11-06 16:47:21,580] [logger.py:98] [logger:__console] [INFO]- 开始上传图片...[0m
+[32m[2019-11-06 16:47:23,659] [logger.py:98] [logger:__console] [INFO]- 上传图片成功... D:\UIAutomation-formwork\driver\upload.exe,D:\UIAutomation-formwork\data\img\5.jpg[0m
+[32m[2019-11-06 16:47:54,449] [logger.py:98] [logger:__console] [INFO]- start browser name :Chrome[0m
+[32m[2019-11-06 16:48:02,887] [logger.py:98] [logger:__console] [INFO]- 打开网页成功！[0m
+[32m[2019-11-06 16:48:13,928] [logger.py:98] [logger:__console] [INFO]- 开始上传图片...[0m
+[32m[2019-11-06 16:48:16,032] [logger.py:98] [logger:__console] [INFO]- 上传图片成功... D:\UIAutomation-formwork\driver\upload.exe,D:\UIAutomation-formwork\data\img\16.jpg[0m
+[32m[2019-11-06 16:49:07,075] [logger.py:98] [logger:__console] [INFO]- start browser name :Chrome[0m
+[32m[2019-11-06 16:49:15,643] [logger.py:98] [logger:__console] [INFO]- 打开网页成功！[0m
+[32m[2019-11-06 16:49:26,642] [logger.py:98] [logger:__console] [INFO]- 开始上传图片...[0m
+[32m[2019-11-06 16:49:32,277] [logger.py:98] [logger:__console] [INFO]- 上传图片成功... D:\UIAutomation-formwork\driver\upload.exe,D:\UIAutomation-formwork\data\img\20.jpg[0m
+[32m[2019-11-06 16:50:13,875] [logger.py:98] [logger:__console] [INFO]- start browser name :Chrome[0m
+[32m[2019-11-06 16:50:22,400] [logger.py:98] [logger:__console] [INFO]- 打开网页成功！[0m
+[32m[2019-11-06 16:50:33,287] [logger.py:98] [logger:__console] [INFO]- 开始上传图片...[0m
+[32m[2019-11-06 16:50:40,315] [logger.py:98] [logger:__console] [INFO]- 上传图片成功... D:\UIAutomation-formwork\driver\upload.exe,D:\UIAutomation-formwork\data\img\53.jpg[0m
+[32m[2019-11-06 16:51:07,796] [logger.py:98] [logger:__console] [INFO]- start browser name :Chrome[0m
+[32m[2019-11-06 16:51:16,191] [logger.py:98] [logger:__console] [INFO]- 打开网页成功！[0m
+[32m[2019-11-06 16:51:27,199] [logger.py:98] [logger:__console] [INFO]- 开始上传图片...[0m
+[32m[2019-11-06 16:51:30,790] [logger.py:98] [logger:__console] [INFO]- 上传图片成功... D:\UIAutomation-formwork\driver\upload.exe,D:\UIAutomation-formwork\data\img\1.jpg[0m
+[32m[2019-11-06 16:52:25,880] [logger.py:98] [logger:__console] [INFO]- start browser name :Chrome[0m
+[32m[2019-11-06 16:52:36,912] [logger.py:98] [logger:__console] [INFO]- start browser name :Chrome[0m
+[32m[2019-11-06 16:52:45,418] [logger.py:98] [logger:__console] [INFO]- 打开网页成功！[0m
+[32m[2019-11-06 16:52:56,464] [logger.py:98] [logger:__console] [INFO]- 开始上传图片...[0m
+[32m[2019-11-06 16:53:00,129] [logger.py:98] [logger:__console] [INFO]- 上传图片成功... D:\UIAutomation-formwork\driver\upload.exe,D:\UIAutomation-formwork\data\img\12.jpg[0m
+[33m[2019-11-06 16:53:10,260] [logger.py:102] [logger:__console] [WARNING]- <page.login_page.LoginPage object at 0x043935D0>页面中未能找到元素('xpath', '/html/body/div[2]/div/div[2]/div/div[2]/div[3]/div/button[2]')[0m
+[32m[2019-11-06 16:54:25,916] [logger.py:98] [logger:__console] [INFO]- start browser name :Chrome[0m
+[32m[2019-11-06 16:54:34,362] [logger.py:98] [logger:__console] [INFO]- 打开网页成功！[0m
+[32m[2019-11-06 16:54:45,222] [logger.py:98] [logger:__console] [INFO]- 开始上传图片...[0m
+[32m[2019-11-06 16:54:48,920] [logger.py:98] [logger:__console] [INFO]- 上传图片成功... D:\UIAutomation-formwork\driver\upload.exe,D:\UIAutomation-formwork\data\img\10.jpg[0m
+[33m[2019-11-06 16:54:59,049] [logger.py:102] [logger:__console] [WARNING]- <page.login_page.LoginPage object at 0x043B5210>页面中未能找到元素('xpath', '//div[@class="ant-modal-content"]/div[2]/div/button[1]')[0m
+[32m[2019-11-06 16:55:23,546] [logger.py:98] [logger:__console] [INFO]- start browser name :Chrome[0m
+[32m[2019-11-06 16:55:32,027] [logger.py:98] [logger:__console] [INFO]- 打开网页成功！[0m
+[32m[2019-11-06 16:55:42,976] [logger.py:98] [logger:__console] [INFO]- 开始上传图片...[0m
+[32m[2019-11-06 16:55:46,578] [logger.py:98] [logger:__console] [INFO]- 上传图片成功... D:\UIAutomation-formwork\driver\upload.exe,D:\UIAutomation-formwork\data\img\27.jpg[0m
+[33m[2019-11-06 16:55:56,696] [logger.py:102] [logger:__console] [WARNING]- <page.login_page.LoginPage object at 0x03F935D0>页面中未能找到元素('xpath', '//div[@class="ant-modal-content"]/div[2]/div/button[1]')[0m
+[32m[2019-11-06 16:57:06,084] [logger.py:98] [logger:__console] [INFO]- start browser name :Chrome[0m
+[32m[2019-11-06 16:57:14,621] [logger.py:98] [logger:__console] [INFO]- 打开网页成功！[0m
+[32m[2019-11-06 16:57:25,500] [logger.py:98] [logger:__console] [INFO]- 开始上传图片...[0m
+[32m[2019-11-06 16:57:29,183] [logger.py:98] [logger:__console] [INFO]- 上传图片成功... D:\UIAutomation-formwork\driver\upload.exe,D:\UIAutomation-formwork\data\img\9.jpg[0m
+[33m[2019-11-06 16:57:39,289] [logger.py:102] [logger:__console] [WARNING]- <page.login_page.LoginPage object at 0x034835B0>页面中未能找到元素('xpath', '//div[@class="ant-modal-content"]/div[2]/div/button[1]')[0m
+[32m[2019-11-06 16:57:45,887] [logger.py:98] [logger:__console] [INFO]- start browser name :Chrome[0m
+[32m[2019-11-06 16:57:54,454] [logger.py:98] [logger:__console] [INFO]- 打开网页成功！[0m
+[32m[2019-11-06 16:58:05,328] [logger.py:98] [logger:__console] [INFO]- 开始上传图片...[0m
+[32m[2019-11-06 16:58:08,995] [logger.py:98] [logger:__console] [INFO]- 上传图片成功... D:\UIAutomation-formwork\driver\upload.exe,D:\UIAutomation-formwork\data\img\28.jpg[0m
+[33m[2019-11-06 16:58:19,120] [logger.py:102] [logger:__console] [WARNING]- <page.login_page.LoginPage object at 0x042335B0>页面中未能找到元素('xpath', '//div[@class="ant-modal-content"]/div[2]/div/button[1]')[0m
+[32m[2019-11-06 16:58:57,451] [logger.py:98] [logger:__console] [INFO]- start browser name :Chrome[0m
+[32m[2019-11-06 16:59:06,011] [logger.py:98] [logger:__console] [INFO]- 打开网页成功！[0m
+[32m[2019-11-06 16:59:16,809] [logger.py:98] [logger:__console] [INFO]- 开始上传图片...[0m
+[32m[2019-11-06 16:59:20,484] [logger.py:98] [logger:__console] [INFO]- 上传图片成功... D:\UIAutomation-formwork\driver\upload.exe,D:\UIAutomation-formwork\data\img\18.jpg[0m
+[32m[2019-11-06 16:59:56,758] [logger.py:98] [logger:__console] [INFO]- start browser name :Chrome[0m
+[32m[2019-11-06 17:00:05,330] [logger.py:98] [logger:__console] [INFO]- 打开网页成功！[0m
+[32m[2019-11-06 17:00:10,648] [logger.py:98] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x039F4210>页面中未能找到元素('xpath', '//div[@class="menuContainer___2WW7T"]/div/ul/li/a/span')[0m
+[32m[2019-11-06 17:00:19,330] [logger.py:98] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x039F4210>页面中未能找到元素('xpath', '//div[@class="menuContainer___2WW7T"]/div/ul/li')[0m
+[32m[2019-11-06 17:00:23,143] [logger.py:98] [logger:__console] [INFO]- start browser name :Chrome[0m
+[32m[2019-11-06 17:00:31,638] [logger.py:98] [logger:__console] [INFO]- 打开网页成功！[0m
+[32m[2019-11-06 17:00:42,734] [logger.py:98] [logger:__console] [INFO]- 开始上传图片...[0m
+[32m[2019-11-06 17:00:46,363] [logger.py:98] [logger:__console] [INFO]- 上传图片成功... D:\UIAutomation-formwork\driver\upload.exe,D:\UIAutomation-formwork\data\img\50.jpg[0m

@@ -5,7 +5,7 @@
 # @Site    : 
 # @File    : test_login.py
 # @Software: PyCharm
-import unittest, os, time, paramunittest
+import unittest, time, paramunittest
 from BeautifulReport import BeautifulReport
 from page.login_page import LoginPage
 from common.basics import open_browser
@@ -16,7 +16,7 @@ from common import read_config
 
 
 @paramunittest.parametrized(
-    {'user': 'root', 'pwd': 'admin'}
+    {'user': 'root', 'pwd': 'admin'},
 )
 class TestLogin(unittest.TestCase):
     @classmethod
@@ -42,8 +42,8 @@ class TestLogin(unittest.TestCase):
     def test_login(self):
         login = self.login
         login.open(self.url, t='小小包早教后台管理')
-        login.input_user('root')
-        login.input_password('admin1')
+        login.input_user(self.user)
+        login.input_password(self.pwd)
         login.click_login_btn()
         self.assertEqual(login.text_check_login_success(0), '首页')
 
@@ -51,15 +51,17 @@ class TestLogin(unittest.TestCase):
         time.sleep(3)
         login = self.login
         login.clicks_tag(4)
-        login.clicks_ant_tag(0)
+        login.clicks_ant_tag(1)
         time.sleep(3)
         login.click_add_video()
         time.sleep(2)
+        login.input_img_name('测试图片')
         login.click_upload()
-        uploaded(type=1)
+        uploaded(type=0)
 
         time.sleep(5)
-
+        login.click_sure()
+        time.sleep(2)
 
 
 if __name__ == '__main__':

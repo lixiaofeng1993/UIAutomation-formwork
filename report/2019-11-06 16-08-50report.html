@@ -7204,55 +7204,48 @@
 
 
     var resultData = {
-    "testPass": 0,
+    "testPass": 1,
     "testResult": [
         {
             "className": "TestLogin_0",
             "methodName": "test_login",
             "description": null,
-            "spendTime": "8.73 s",
-            "status": "错误",
+            "spendTime": "4.28 s",
+            "status": "成功",
             "log": [
-                "\u001b[32m[2019-11-06 13:54:19,429] [logger.py:95] [logger:__console] [INFO]- 打开网页成功！\u001b[0m\n\u001b[32m[2019-11-06 13:54:24,730] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x03E9F9B0>页面中未能找到元素('xpath', '//div[@class=\"menuContainer___2WW7T\"]/div/ul/li/a/span')\u001b[0m\nD:\\img\\test_login.png 11111111111111111\n",
-                "Traceback (most recent call last):\n",
-                "  File \"D:\\python\\lib\\site-packages\\BeautifulReport\\BeautifulReport.py\", line 425, in __wrap\n    result = func(*args, **kwargs)\n",
-                "  File \"D:\\UIAutomation-formwork\\case\\test_login.py\", line 48, in test_login\n    self.assertEqual(login.text_check_login_success(0), '首页')\n",
-                "  File \"D:\\UIAutomation-formwork\\page\\login_page.py\", line 30, in text_check_login_success\n    return self.get_texts(self.check_login_success_loc, n)\n",
-                "  File \"D:\\UIAutomation-formwork\\common\\basics.py\", line 349, in get_texts\n    element = self.find_elements(locator)[n]\n",
-                "TypeError: 'bool' object is not subscriptable\n",
-                "\nDuring handling of the above exception, another exception occurred:\n\n",
-                "Traceback (most recent call last):\n",
-                "  File \"D:\\python\\lib\\unittest\\case.py\", line 59, in testPartExecutor\n    yield\n",
-                "  File \"D:\\python\\lib\\unittest\\case.py\", line 605, in run\n    testMethod()\n",
-                "  File \"D:\\python\\lib\\site-packages\\BeautifulReport\\BeautifulReport.py\", line 430, in __wrap\n    data = BeautifulReport.img2base(img_path, pargs[0] + '.png')\n",
-                "  File \"D:\\python\\lib\\site-packages\\BeautifulReport\\BeautifulReport.py\", line 407, in img2base\n    with open(img_path + pattern + file_name, 'rb') as file:\n",
-                "FileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\img\\\\test_login.png'\n"
+                "\u001b[32m[2019-11-06 16:08:59,292] [logger.py:98] [logger:__console] [INFO]- 打开网页成功！\u001b[0m",
+                "<br></br>",
+                ""
             ]
         },
         {
             "className": "TestLogin_0",
             "methodName": "test_upload",
             "description": null,
-            "spendTime": "8.04 s",
+            "spendTime": "7.34 s",
             "status": "错误",
             "log": [
-                "\u001b[32m[2019-11-06 13:54:33,309] [logger.py:95] [logger:__console] [INFO]- <page.login_page.LoginPage object at 0x03E9F9B0>页面中未能找到元素('xpath', '//div[@class=\"menuContainer___2WW7T\"]/div/ul/li')\u001b[0m\n",
+                "",
                 "Traceback (most recent call last):\n",
                 "  File \"D:\\python\\lib\\unittest\\case.py\", line 59, in testPartExecutor\n    yield\n",
                 "  File \"D:\\python\\lib\\unittest\\case.py\", line 605, in run\n    testMethod()\n",
-                "  File \"D:\\UIAutomation-formwork\\case\\test_login.py\", line 53, in test_upload\n    login.clicks_tag(4)\n",
-                "  File \"D:\\UIAutomation-formwork\\page\\login_page.py\", line 35, in clicks_tag\n    self.clicks(self.tag_loc, n)\n",
-                "  File \"D:\\UIAutomation-formwork\\common\\basics.py\", line 161, in clicks\n    element = self.find_elements(locator)[n]\n",
-                "TypeError: 'bool' object is not subscriptable\n"
+                "  File \"D:\\UIAutomation-formwork\\case\\test_login.py\", line 56, in test_upload\n    login.click_add_video()\n",
+                "  File \"D:\\UIAutomation-formwork\\page\\login_page.py\", line 46, in click_add_video\n    self.click(self.add_video_loc)\n",
+                "  File \"D:\\UIAutomation-formwork\\common\\basics.py\", line 163, in click\n    element.click()\n",
+                "  File \"D:\\python\\lib\\site-packages\\selenium\\webdriver\\remote\\webelement.py\", line 80, in click\n    self._execute(Command.CLICK_ELEMENT)\n",
+                "  File \"D:\\python\\lib\\site-packages\\selenium\\webdriver\\remote\\webelement.py\", line 628, in _execute\n    return self._parent.execute(command, params)\n",
+                "  File \"D:\\python\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py\", line 320, in execute\n    self.error_handler.check_response(response)\n",
+                "  File \"D:\\python\\lib\\site-packages\\selenium\\webdriver\\remote\\errorhandler.py\", line 242, in check_response\n    raise exception_class(message, screen, stacktrace)\n",
+                "selenium.common.exceptions.WebDriverException: Message: unknown error: Element <span>...</span> is not clickable at point (346, 234). Other element would receive the click: <button type=\"button\" class=\"ant-btn ant-btn-primary\">...</button>\n  (Session info: chrome=78.0.3904.87)\n  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.18362 x86_64)\n\n"
             ]
         }
     ],
     "testName": "UI自动化测试",
     "testAll": 2,
     "testFail": 0,
-    "testError": 2,
-    "beginTime": "2019-11-06 13:54:11",
-    "totalTime": "26s",
+    "testError": 1,
+    "beginTime": "2019-11-06 16:08:50",
+    "totalTime": "17s",
     "testSkip": 0
 };
     function details(obj) {
