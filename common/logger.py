@@ -65,9 +65,12 @@ class Log:
         log_list = self.get_file_sorted(log_path)
         report_list = self.get_file_sorted(report_path)
         report_img_list = self.get_file_sorted(img_path)
-        self.complete_path(log_list, log_path)
-        self.complete_path(report_list, report_path)
-        self.complete_path(report_img_list, img_path)
+        if log_list:
+            self.complete_path(log_list, log_path)
+        if report_path:
+            self.complete_path(report_list, report_path)
+        if report_img_list:
+            self.complete_path(report_img_list, img_path)
 
     def delete_logs(self, file_path):
         try:
