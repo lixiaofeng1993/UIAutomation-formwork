@@ -40,8 +40,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 driver_path = check_dir(os.path.join(BASE_DIR, "driver"))  # 驱动文件路径
 
 data_path = check_dir(os.path.join(BASE_DIR, "data"))  # 上传文件路径
-
 data_img_path = check_dir(os.path.join(data_path, "img"))  # 上传图片路径
+data_txt_path = check_dir(os.path.join(data_path, "txt" + pattern + "city.txt"))  # txt文件路径
 
 config_path = check_dir(os.path.join(BASE_DIR, "config"))  # 配置文件目录
 cfg_path = check_file(os.path.join(config_path, "cfg.ini"))
@@ -58,4 +58,4 @@ hour = time.strftime('%Y-%m-%d')
 now = time.strftime('%Y-%m-%d %H-%M-%S')
 
 if __name__ == '__main__':
-    print(img_path)
+    print(data_txt_path)
