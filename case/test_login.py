@@ -9,7 +9,8 @@ import unittest, os, time, paramunittest
 from BeautifulReport import BeautifulReport
 from page.login_page import LoginPage
 from common.basics import open_browser
-from common.logger import Log, img_path
+from common.logger import Log
+from common.settings import img_path
 from common.random_upload import uploaded
 from common import read_config
 
@@ -37,11 +38,12 @@ class TestLogin(unittest.TestCase):
     def save_img(self, img_name):
         self.driver.get_screenshot_as_file('{}/{}.png'.format(self.img_path, img_name))
 
+    @BeautifulReport.add_test_img('test_login')
     def test_login(self):
         login = self.login
         login.open(self.url, t='小小包早教后台管理')
         login.input_user('root')
-        login.input_password('admin')
+        login.input_password('admin1')
         login.click_login_btn()
         self.assertEqual(login.text_check_login_success(0), '首页')
 

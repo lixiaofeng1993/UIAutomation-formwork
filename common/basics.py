@@ -18,20 +18,21 @@ from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.wait import WebDriverWait
 from common.logger import Log
 from common import read_config
+from common.settings import driver_path, check_file, file_not_exists_error  # 驱动路径
 
 
 def open_browser(browser='chrome'):
     """打开浏览器函数。"firefox"、"chrome"、"ie",'phantomjs'"""
 
-    # 驱动路径
-    driver_path = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
     try:
         if browser == 'firefox':
             Log().info("start browser name :Firefox")
-            executable_path = os.path.join(driver_path, 'driver\\geckodriver.exe')
-            # executable_path = os.path.join(driver_path, 'driver/geckodriver')
-            driver = webdriver.Firefox(executable_path=executable_path)
-            return driver
+            executable_path = check_file(os.path.join(driver_path, 'geckodriver.exe'))
+            if not executable_path:
+                raise FileNotFoundError(file_not_exists_error.format(executable_path))
+            else:
+                driver = webdriver.Firefox(executable_path=executable_path)
+                return driver
         elif browser == 'chrome':
             Log().info("start browser name :Chrome")
             # 加启动配置,忽略 Chrome正在受到自动软件的控制 提示
@@ -40,10 +41,12 @@ def open_browser(browser='chrome'):
             # chrome启动静默模式;默认显示浏览器界面
             if read_config.chrome_interface != 'True':
                 option.add_argument('headless')
-            executable_path = os.path.join(driver_path, 'driver\\chromedriver.exe')
-            # executable_path = os.path.join(driver_path, 'driver/chromedriver')
-            driver = webdriver.Chrome(chrome_options=option, executable_path=executable_path)
-            return driver
+            executable_path = check_file(os.path.join(driver_path, 'chromedriver.exe'))
+            if not executable_path:
+                raise FileNotFoundError(file_not_exists_error.format(executable_path))
+            else:
+                driver = webdriver.Chrome(chrome_options=option, executable_path=executable_path)
+                return driver
         elif browser == 'ie':
             Log().info("start browser name :Ie")
             driver = webdriver.Ie()
@@ -54,10 +57,10 @@ def open_browser(browser='chrome'):
             return driver
         else:
             Log().warning('额，暂不支持此浏览器诶。先试试firefox、chrome、ie、phantomJS浏览器吧。')
-            return
+            return False
     except Exception as msg:
         Log().error('浏览器出错了呀！%s' % msg)
-        return
+        return False
 
 
 def open_app():
@@ -97,7 +100,7 @@ class Crazy:
         self.driver = driver
         self.action = ActionChains(self.driver)
         self.touch = TouchAction(self.driver)
-        self.timeout = 10  # 显示等待超时时间
+        self.timeout = 5  # 显示等待超时时间
         self.t = 1
         self.log = Log()
 
@@ -124,7 +127,7 @@ class Crazy:
         """重写元素定位方法"""
         if not isinstance(locator, tuple):
             self.log.error('locator参数必须是元组类型，而不是：{}'.format(type(locator)))
-            return ""  # 根据返回值判断是否定位到元素，使用频率很高
+            return False  # 根据返回值判断是否定位到元素，使用频率很高
         else:
             try:
                 element = WebDriverWait(self.driver, self.timeout, self.t).until(
@@ -133,13 +136,13 @@ class Crazy:
                     return element
             except:
                 self.log.warning('%s页面中未能找到元素%s' % (self, locator))
-                return ""
+                return False
 
     def find_elements(self, locator):
         """定位一组元素"""
         if not isinstance(locator, tuple):
             self.log.error('locator参数必须是元组类型，而不是：{}'.format(type(locator)))
-            return ""
+            return False
         else:
             try:
                 elements = WebDriverWait(self.driver, self.timeout, self.t).until(
@@ -147,11 +150,7 @@ class Crazy:
                 return elements
             except:
                 self.log.info('%s页面中未能找到元素%s' % (self, locator))
-                return ""
-
-    def click_coordinate(self, coordinate, timeout=10):
-        """点击坐标"""
-        self.driver.tap(coordinate, timeout)
+                return False
 
     def clicks(self, locator, n):
         """点击一组元组中的一个"""
@@ -180,6 +179,45 @@ class Crazy:
         element.clear()
         element.send_keys(text)
 
+    # ================================================App===============================================================
+
+    def click_coordinate(self, coordinate, timeout=10):
+        """点击坐标"""
+        self.driver.tap(coordinate, timeout)
+
+    def long_press(self, element):
+        """长按"""
+        return self.touch.long_press(element).perform()
+
+    def drag_and_drop(self, element, element1):
+        """拖拽, 添加微信小程序到我的小程序"""
+        element_obj = self.long_press(element)
+        element_obj.move_to(element1).wait(1000).perform()
+
+    def swipeDown(self, t=500, n=1):
+        '''向下滑动屏幕'''
+        time.sleep(2)
+        l = self.driver.get_window_size()
+        x1 = l['width'] * 0.5  # x坐标
+        y1 = l['height'] * 0.25  # 起始y坐标
+        y2 = l['height'] * 0.85  # 终点y坐标
+        for i in range(n):
+            time.sleep(0.5)
+            self.driver.swipe(x1, y1, x1, y2, t)
+
+    def swipeUp(self, t=500, n=1):
+        '''向上滑动屏幕'''
+        time.sleep(2)
+        l = self.driver.get_window_size()
+        x1 = l['width'] * 0.5  # x坐标
+        y1 = l['height'] * 0.65  # 起始y坐标
+        y2 = l['height'] * 0.25  # 终点y坐标
+        for i in range(n):
+            time.sleep(0.5)
+            self.driver.swipe(x1, y1, x1, y2, t)
+
+    # ================================================Web===============================================================
+
     def send_keys_enter(self):
         """敲enter"""
         self.action.send_keys(Keys.ENTER).perform()
@@ -193,15 +231,6 @@ class Crazy:
 
     def send_keys_arrow_right(self):
         self.action.send_keys(Keys.ARROW_RIGHT).perform()
-
-    def long_press(self, element):
-        """长按"""
-        return self.touch.long_press(element).perform()
-
-    def drag_and_drop(self, element, element1):
-        """拖拽, 添加微信小程序到我的小程序"""
-        element_obj = self.long_press(element)
-        element_obj.move_to(element1).wait(1000).perform()
 
     def is_text_in_element(self, locator, text):
         """判断文本在元素里，没定位到元素返回False，定位到返回判断结果布尔值"""
@@ -308,11 +337,6 @@ class Crazy:
                 self.log.warning('frame 切换失败！')
         except TimeoutException:
             self.log.warning('没有发现iframe元素%s' % frame)
-            # try:
-            #     self.driver.switch_to_frame(self.find_element(frame))
-            #     self.log.info('切换iframe成功！')
-            # except:
-            #     self.log.warning('没有发现iframe元素%s' % frame)
 
     def current_window_handle(self):
         """浏览器handle"""
@@ -360,7 +384,7 @@ class Crazy:
         if element:
             return element.text
         else:
-            return None
+            return False
 
     def get_attribute(self, locator, name):
         """获取属性"""
@@ -426,50 +450,8 @@ class Crazy:
         """获取cookies"""
         return self.driver.get_cookies()
 
-    def swipeDown(self, t=500, n=1):
-        '''向下滑动屏幕'''
-        time.sleep(2)
-        l = self.driver.get_window_size()
-        x1 = l['width'] * 0.5  # x坐标
-        y1 = l['height'] * 0.25  # 起始y坐标
-        y2 = l['height'] * 0.85  # 终点y坐标
-        for i in range(n):
-            time.sleep(0.5)
-            self.driver.swipe(x1, y1, x1, y2, t)
 
-    def swipeUp(self, t=500, n=1):
-        '''向上滑动屏幕'''
-        time.sleep(2)
-        l = self.driver.get_window_size()
-        x1 = l['width'] * 0.5  # x坐标
-        y1 = l['height'] * 0.65  # 起始y坐标
-        y2 = l['height'] * 0.25  # 终点y坐标
-        for i in range(n):
-            time.sleep(0.5)
-            self.driver.swipe(x1, y1, x1, y2, t)
-        time.sleep(1)
-
-    def test(self):
-        self.driver.press_keycode(84)
-
-# from tomorrow import threads
-#
-#
-# # 同时启动多个浏览器
-# @threads(5)
-# def run_case(name):
-#     driver = open_browser(name)
-#     driver.set_page_load_timeout(10)
-#     try:
-#         driver.get('https://github.com/')
-#     except TimeoutException as e:
-#         print('{}, 111111111111111111111111111111111'.format(e))
-#         driver.execute_script('window.stop()')
-#     print(driver.title)
-#     driver.quit()
-#
-#
-# if __name__ == "__main__":
-#     names = ["chrome", "firefox", "js"]
-#     for i in names:
-#         run_case(i)
+if __name__ == '__main__':
+    driver = open_browser('firefox')
+    c = Crazy(driver)
+    c.open('https://dev.edu.xxbmm.com/zh/user/user')

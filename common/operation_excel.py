@@ -1,11 +1,9 @@
 # coding:utf-8
-import time
-import xlrd, os
+import xlrd
 from common.logger import Log
 from openpyxl import load_workbook
 import openpyxl
 from openpyxl.styles import Font, colors
-from common import read_config
 
 
 class ReadExcel:
@@ -70,7 +68,7 @@ def copy_excel(case_path, report_path, sheet_num=0):
     wb2.close()
 
 
-class Write_excel(object):
+class Write_excel:
     """写入excel数据"""
 
     def __init__(self, filename, title='Sheet1'):

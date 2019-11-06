@@ -6,11 +6,10 @@ import unittest
 from BeautifulReport import BeautifulReport
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-from common.logger import Log, report_path
+from common.logger import Log
 # from common.HTMLTestRunnerCN import HTMLTestRunner
 from common import read_config
-
-now = time.strftime('%Y-%m-%d %H-%M-%S')
+from common.settings import now, case_path, report_path
 
 
 def add_case(case_path):
@@ -129,24 +128,23 @@ def send_wx():
 def run_email():
     # itchat.auto_login(hotReload=True)
     # 测试用例路径，匹配规则
-    case_path = os.path.abspath(os.path.dirname(__file__)) + '\\case'
     all_case = add_case(case_path)
     # 生成报告测试路径
     run_case(all_case, report_path)
     # 获取最新的测试报告
-    report_file_html = get_new_report_html(report_path)
-    send_wx()  # 发送微信信息
-    user = read_config.user
-    # qq邮箱授权码
-    pwd = read_config.pwd
-    user_163 = read_config.user_163
-    # 163邮箱授权码
-    pwd_163 = read_config.pwd_163
-    # _to = ['18701137212@163.com','liyongfeng@xxbmm.com','954274592@qq.com']
-    _to = read_config.to.split(',')
-    smtp_service = read_config.smtp_service
-    smtp_service_163 = read_config.smtp_service_163
-    send_email(user, pwd, user_163, pwd_163, _to, smtp_service, smtp_service_163, report_file_html)
+    # report_file_html = get_new_report_html(report_path)
+    # send_wx()  # 发送微信信息
+    # user = read_config.user
+    # # qq邮箱授权码
+    # pwd = read_config.pwd
+    # user_163 = read_config.user_163
+    # # 163邮箱授权码
+    # pwd_163 = read_config.pwd_163
+    # # _to = ['18701137212@163.com','liyongfeng@xxbmm.com','954274592@qq.com']
+    # _to = read_config.to.split(',')
+    # smtp_service = read_config.smtp_service
+    # smtp_service_163 = read_config.smtp_service_163
+    # send_email(user, pwd, user_163, pwd_163, _to, smtp_service, smtp_service_163, report_file_html)
 
 
 if __name__ == '__main__':
