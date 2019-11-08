@@ -3,7 +3,7 @@
 # @Time    : 2019/9/6 11:53
 # @Author  : lixiaofeng
 # @Site    : 
-# @File    : test_login.py
+# @File    : login.py
 # @Software: PyCharm
 import unittest, time, paramunittest
 from BeautifulReport import BeautifulReport
@@ -27,9 +27,9 @@ class TestLogin(unittest.TestCase):
         cls.url = read_config.url
         cls.img_path = img_path
 
-    @classmethod
-    def tearDownClass(cls):
-        cls.driver.close()
+    # @classmethod
+    # def tearDownClass(cls):
+    #     cls.driver.close()
 
     def setParameters(self, user, pwd):
         self.user = user
@@ -47,21 +47,23 @@ class TestLogin(unittest.TestCase):
         login.click_login_btn()
         self.assertEqual(login.text_check_login_success(0), '首页')
 
-    def test_upload(self):
-        time.sleep(3)
-        login = self.login
-        login.clicks_tag(4)
-        login.clicks_ant_tag(1)
-        time.sleep(3)
-        login.click_add_video()
-        time.sleep(2)
-        login.input_img_name('测试图片')
-        login.click_upload()
-        uploaded(type=0)
 
-        time.sleep(5)
-        login.click_sure()
-        time.sleep(2)
+
+        # def test_upload(self):
+        #     time.sleep(3)
+        #     login = self.login
+        #     login.clicks_tag(4)
+        #     login.clicks_ant_tag(1)
+        #     time.sleep(3)
+        #     login.click_add_video()
+        #     time.sleep(2)
+        #     login.input_img_name('测试图片')
+        #     login.click_upload()
+        #     uploaded(type=0)
+        #
+        #     time.sleep(5)
+        #     login.click_sure()
+        #     time.sleep(2)
 
 
 if __name__ == '__main__':

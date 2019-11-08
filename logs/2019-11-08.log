@@ -1,0 +1,5 @@
+[32m[2019-11-08 16:04:15,975] [logger.py:98] [logger:__console] [INFO]- start browser name :Chrome[0m
+[31m[2019-11-08 16:04:29,867] [logger.py:104] [logger:__console] [ERROR]- 打开 https://dev.edu.xxbmm.com/zh/login title错误，超时！ Message: 
+[0m
+[32m[2019-11-08 16:04:40,909] [logger.py:98] [logger:__console] [INFO]- 开始上传图片...[0m
+[32m[2019-11-08 16:04:44,819] [logger.py:98] [logger:__console] [INFO]- 上传图片成功... D:\UIAutomation-formwork\driver\upload.exe,D:\UIAutomation-formwork\data\img\1.jpg[0m

@@ -115,13 +115,14 @@ class Crazy:
         # 是否最大化浏览器
         if read_config.maximize != 'True':
             self.driver.maximize_window()
-        try:
-            WebDriverWait(self.driver, self.timeout, self.t).until(EC.title_contains(t))
-            self.log.info('打开网页成功！')
-        except TimeoutException:
-            self.log.error('打来 {} title错误，超时！'.format(url))
-        except Exception as msg:
-            self.log.error('打开网页产生的其他错误：{}'.format(msg))
+        if t != '':
+            try:
+                WebDriverWait(self.driver, self.timeout, self.t).until(EC.title_contains(t))
+                self.log.info('打开网页成功！')
+            except TimeoutException as e:
+                self.log.error('打开 {} title错误，超时！ {}'.format(url, e))
+            except Exception as msg:
+                self.log.error('打开网页产生的其他错误：{}'.format(msg))
 
     def find_element(self, locator):
         """重写元素定位方法"""
