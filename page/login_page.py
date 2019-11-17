@@ -1,62 +1,44 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# @Time    : 2019/9/6 11:53
-# @Author  : lixiaofeng
-# @Site    : 
-# @File    : login_page.py
-# @Software: PyCharm
+#!/user/bin/env python
+# coding=utf-8
+'''
+# 创 建 人: 李先生
+# 文 件 名: login_page.py
+# 说   明: 
+# 创建时间: 2019/11/16 19:07
+'''
+
 from common.basics import Crazy
 
 
 class LoginPage(Crazy):
-    user_loc = ('id', 'username')
+    skip_button_loc = ("id", "com.xueqiu.android:id/tv_skip")
 
-    def input_user(self, username):
-        self.send_keys(self.user_loc, username)
+    def element_skip_button(self):
+        return self.find_element(self.skip_button_loc)
 
-    password_loc = ('id', 'password')
+    def click_skip_button(self):
+        self.click(self.skip_button_loc)
 
-    def input_password(self, pwd):
-        self.send_keys(self.password_loc, pwd)
+    search_button_loc = ("id", "com.xueqiu.android:id/tv_search")
 
-    login_btn_loc = ('tag name', 'button')
+    def click_search_button(self):
+        self.click(self.search_button_loc)
 
-    def click_login_btn(self):
-        self.click(self.login_btn_loc)
+    search_text_loc = ("id", "com.xueqiu.android:id/search_input_text")
 
-    check_login_success_loc = ('xpath', '//div[@class="menuContainer___2WW7T"]/div/ul/li/a/span')
+    def click_search_text(self):
+        self.click(self.search_text_loc)
 
-    def text_check_login_success(self, n):
-        return self.get_texts(self.check_login_success_loc, n)
+    def input_search_text(self, text):
+        self.send_keys(self.search_text_loc, text)
 
-    tag_loc = ('xpath', '//div[@class="menuContainer___2WW7T"]/div/ul/li')
+    # contains(@text, "文本")
+    new_pople_loc = ("xpath", '//*[@resource-id="com.xueqiu.android:id/tag_guide_text" and @text="新手福利"]')
 
-    def clicks_tag(self, n):
-        self.clicks(self.tag_loc, n)
+    def element_new_pople(self):
+        return self.find_element(self.new_pople_loc)
 
-    ant_tag_loc = ('xpath', '//ul[@class="ant-menu ant-menu-sub ant-menu-inline"]/li/a')
+    shares_search_loc = ("id", "com.xueqiu.android:id/name")
 
-    def clicks_ant_tag(self, n):
-        self.clicks(self.ant_tag_loc, n)
-
-    # add_video_loc = ('xpath', '//div[@class="header___3l9tq"]/span/button')
-    add_video_loc = ('xpath', '//div[@class="addPicture___2RcWX"]/button')
-
-    def click_add_video(self):
-        self.click(self.add_video_loc)
-
-    # click_upload_loc = ('xpath', '//form[@class="ant-form ant-form-horizontal"]/div[6]/div[2]/div/span')
-    click_upload_loc = ('xpath', '//div[@class="ant-upload ant-upload-select ant-upload-select-picture-card"]/span/div')
-
-    def click_upload(self):
-        self.click(self.click_upload_loc)
-
-    img_name_loc = ('id', 'name')
-
-    def input_img_name(self, name):
-        self.send_keys(self.img_name_loc, name)
-
-    sure_loc = ('xpath', '//div[@class="ant-modal-content"]/div[3]/div/button[2]')
-
-    def click_sure(self):
-        self.click(self.sure_loc)
+    def click_shares_search(self):
+        self.click(self.shares_search_loc)

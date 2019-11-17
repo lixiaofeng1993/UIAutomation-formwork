@@ -1,0 +1,26 @@
+[33m[2019-11-16 19:25:46,490] [logger.py:102] [logger:__console] [WARNING]- <page.weixin_login_page.LoginPage object at 0x036F4DF0>页面中未能找到元素('id', 'android:id/button1')[0m
+[33m[2019-11-16 19:26:29,926] [logger.py:102] [logger:__console] [WARNING]- <page.weixin_login_page.LoginPage object at 0x040C4810>页面中未能找到元素('id', 'com.tencent.mm:id/azz')[0m
+[32m[2019-11-16 19:40:22,463] [logger.py:98] [logger:__console] [INFO]- 测试用例：<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<paramunittest.TestOperateManage_0 testMethod=test_login>]>]>]>[0m
+[32m[2019-11-16 19:41:38,734] [logger.py:98] [logger:__console] [INFO]- 测试用例：<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<paramunittest.TestOperateManage_0 testMethod=test_login>]>]>]>[0m
+[32m[2019-11-16 19:42:01,916] [logger.py:98] [logger:__console] [INFO]- 执行用例，生成HTML报告![0m
+[32m[2019-11-16 19:42:46,500] [logger.py:98] [logger:__console] [INFO]- 测试用例：<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<paramunittest.TestOperateManage_0 testMethod=test_login>]>]>]>[0m
+[33m[2019-11-16 19:43:11,424] [logger.py:102] [logger:__console] [WARNING]- <page.weixin_login_page.LoginPage object at 0x0426B4D0>页面中未能找到元素('id', 'com.tencent.mm:id/azz')[0m
+[32m[2019-11-16 19:43:12,053] [logger.py:98] [logger:__console] [INFO]- 执行用例，生成HTML报告![0m
+[32m[2019-11-16 19:43:12,055] [logger.py:98] [logger:__console] [INFO]- 最新的测试报告是：2019-11-16 19-42-46report.html[0m
+[32m[2019-11-16 19:43:12,059] [logger.py:98] [logger:__console] [INFO]- 写入邮件正文[0m
+[32m[2019-11-16 19:43:12,064] [logger.py:98] [logger:__console] [INFO]- 添加邮件附件[0m
+[32m[2019-11-16 19:43:14,118] [logger.py:98] [logger:__console] [INFO]- 邮件发送失败的原因是：(535, b'Error: \xca\xda\xc8\xa8\xc2\xeb\xb4\xed\xce\xf3\xa3\xac\xc7\xeb\xca\xe4\xc8\xeb\xd5\xfd\xc8\xb7\xb5\xc4\xca\xda\xc8\xa8\xc2\xeb\xa1\xa3\xcf\xea\xc7\xe9\xc7\xeb\xbf\xb4: http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256') 
+[0m
+[32m[2019-11-16 23:20:44,059] [logger.py:98] [logger:__console] [INFO]- 测试用例：<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<paramunittest.TestOperateManage_0 testMethod=test_login>]>]>]>[0m
+[32m[2019-11-16 23:23:34,970] [logger.py:98] [logger:__console] [INFO]- 测试用例：<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<paramunittest.TestOperateManage_0 testMethod=test_login>]>]>]>[0m
+[32m[2019-11-16 23:25:42,950] [logger.py:98] [logger:__console] [INFO]- 执行用例，生成HTML报告![0m
+[32m[2019-11-16 23:25:42,952] [logger.py:98] [logger:__console] [INFO]- 最新的测试报告是：2019-11-16 23-23-34report.html[0m
+[32m[2019-11-16 23:25:42,956] [logger.py:98] [logger:__console] [INFO]- 写入邮件正文[0m
+[32m[2019-11-16 23:25:42,961] [logger.py:98] [logger:__console] [INFO]- 添加邮件附件[0m
+[32m[2019-11-16 23:25:45,752] [logger.py:98] [logger:__console] [INFO]- 954274592@qq.com账号邮件发送成功！请通知相关人员查收。
+[0m
+[32m[2019-11-16 23:29:43,442] [logger.py:98] [logger:__console] [INFO]- <page.weixin_login_page.LoginPage object at 0x03CF4410>页面中未能找到元素('id', 'com.tencent.mm:id/l3')[0m
+[32m[2019-11-16 23:31:44,930] [logger.py:98] [logger:__console] [INFO]- <page.weixin_login_page.LoginPage object at 0x03424410>页面中未能找到元素('id', 'com.tencent.mm:id/l3')[0m
+[32m[2019-11-16 23:46:27,338] [logger.py:98] [logger:__console] [INFO]- 测试用例：<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<paramunittest.TestOperateManage_0 testMethod=test_login>]>]>]>[0m
+[32m[2019-11-16 23:46:39,730] [logger.py:98] [logger:__console] [INFO]- 执行用例，生成HTML报告![0m
+[32m[2019-11-16 23:54:16,742] [logger.py:98] [logger:__console] [INFO]- 测试用例：<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<paramunittest.TestOperateManage_0 testMethod=test_login>]>]>]>[0m

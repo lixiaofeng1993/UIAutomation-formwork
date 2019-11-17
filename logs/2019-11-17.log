@@ -1,0 +1,5 @@
+[32m[2019-11-17 00:00:55,354] [logger.py:98] [logger:__console] [INFO]- 测试用例：<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<paramunittest.TestOperateManage_0 testMethod=test_login>]>]>]>[0m
+[31m[2019-11-17 16:38:16,388] [logger.py:104] [logger:__console] [ERROR]- <page.login_page.LoginPage object at 0x0372D990>页面中未能找到元素 ('id', 'com.xueqiu.android:id/tv_skip') [0m
+[31m[2019-11-17 16:38:27,607] [logger.py:104] [logger:__console] [ERROR]- <page.login_page.LoginPage object at 0x0372D990>页面中未能找到元素 ('xpath', '//*[@resource-id="com.xueqiu.android:id/tag_guide_text" and @text="新手福利"]') [0m
+[31m[2019-11-17 16:40:15,052] [logger.py:104] [logger:__console] [ERROR]- <page.login_page.LoginPage object at 0x0372D990>页面中未能找到元素 ('id', 'com.xueqiu.android:id/tv_skip') [0m
+[31m[2019-11-17 16:40:27,564] [logger.py:104] [logger:__console] [ERROR]- <page.login_page.LoginPage object at 0x0372D990>页面中未能找到元素 ('xpath', '//*[@resource-id="com.xueqiu.android:id/tag_guide_text" and @text="新手福利"]') [0m

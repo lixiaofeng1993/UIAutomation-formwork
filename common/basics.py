@@ -20,76 +20,82 @@ from common.logger import Log
 from common import read_config
 from common.settings import driver_path, check_file, file_not_exists_error  # 驱动路径
 
+element_not_click_error = ("元素定位异常，无法点击.")
+element_not_input_error = ("元素定位异常，无法点击.")
 
-def open_browser(browser='chrome'):
-    """打开浏览器函数。"firefox"、"chrome"、"ie",'phantomjs'"""
+
+def open_browser(browser="chrome"):
+    """打开浏览器函数。firefox、chrome、ie,phantomjs"""
 
     try:
-        if browser == 'firefox':
+        if browser == "firefox":
             Log().info("start browser name :Firefox")
-            executable_path = check_file(os.path.join(driver_path, 'geckodriver.exe'))
+            executable_path = check_file(os.path.join(driver_path, "geckodriver.exe"))
             if not executable_path:
                 raise FileNotFoundError(file_not_exists_error.format(executable_path))
             else:
                 driver = webdriver.Firefox(executable_path=executable_path)
                 return driver
-        elif browser == 'chrome':
+        elif browser == "chrome":
             Log().info("start browser name :Chrome")
             # 加启动配置,忽略 Chrome正在受到自动软件的控制 提示
             option = webdriver.ChromeOptions()
-            option.add_argument('disable-infobars')
+            option.add_argument("disable-infobars")
             # chrome启动静默模式;默认显示浏览器界面
-            if read_config.chrome_interface != 'True':
-                option.add_argument('headless')
-            executable_path = check_file(os.path.join(driver_path, 'chromedriver.exe'))
+            if read_config.chrome_interface != "True":
+                option.add_argument("headless")
+            executable_path = check_file(os.path.join(driver_path, "chromedriver.exe"))
             if not executable_path:
                 raise FileNotFoundError(file_not_exists_error.format(executable_path))
             else:
                 driver = webdriver.Chrome(chrome_options=option, executable_path=executable_path)
                 return driver
-        elif browser == 'ie':
+        elif browser == "ie":
             Log().info("start browser name :Ie")
             driver = webdriver.Ie()
             return driver
-        elif browser == 'js':
+        elif browser == "js":
             Log().info("start browser name :PhantomJS")
             driver = webdriver.PhantomJS()
             return driver
         else:
-            Log().warning('额，暂不支持此浏览器诶。先试试firefox、chrome、ie、phantomJS浏览器吧。')
-            return False
+            # Log().warning("额，暂不支持此浏览器诶。先试试firefox、chrome、ie、phantomJS浏览器吧。")
+            raise ("额，暂不支持此浏览器诶。先试试firefox、chrome、ie、phantomJS浏览器吧。")
     except Exception as msg:
-        Log().error('浏览器出错了呀！%s' % msg)
-        return False
+        # Log().error("浏览器出错了呀！%s" % msg)
+        raise ("浏览器出错了呀！%s" % msg)
 
 
 def open_app():
     try:
         desired_caps = {
-            'platformName': read_config.platform_name,
+            "platformName": read_config.platform_name,
 
-            'deviceName': read_config.device_name,
+            "deviceName": read_config.device_name,
 
-            'platformVersion': read_config.platform_version,
+            # "platformVersion": read_config.platform_version,
 
-            'appPackage': read_config.app_package,
+            "appPackage": read_config.app_package,
 
-            'appActivity': read_config.app_activity,
+            "appActivity": read_config.app_activity,
 
-            'noReset': True,
+            "automationName": read_config.automationName,
+
+            # 不重置app
+            "noReset": True,
 
             # 隐藏手机默认键盘
-            'unicodeKeyboard': True,
+            "unicodeKeyboard": True,
 
-            'resetKeyboard': True,
+            "resetKeyboard": True,
 
-            'chromeOptions': {'androidProcess': 'com.tencent.mm:tools'}
+            # "chromeOptions": {"androidProcess": "com.tencent.mm:tools"}
         }
         # 关联appium
-        driver = app.Remote('http://127.0.0.1:4723/wd/hub', desired_caps)
+        driver = app.Remote("http://127.0.0.1:4723/wd/hub", desired_caps)
         return driver
     except Exception as e:
-        raise Exception('连接 Appium 出错：{}'.format(e))
+        raise Exception("连接 Appium 出错：{}".format(e))
 
 
 class Crazy:
@@ -104,81 +110,101 @@ class Crazy:
         self.t = 1
         self.log = Log()
 
-    def open(self, url, t=''):
+    def open(self, url, t=""):
         """get url，最大化浏览器，判断title"""
         self.driver.set_page_load_timeout(self.timeout)  # 页面加载等待
         try:
             self.driver.get(url)
         except TimeoutException as e:
-            self.log.error('打开{} 页面加载超时！'.format(url))
-            self.driver.execute_script('window.stop()')
+            self.log.error("打开{} 页面加载超时！".format(url))
+            self.driver.execute_script("window.stop()")
         # 是否最大化浏览器
-        if read_config.maximize != 'True':
+        if read_config.maximize != "True":
             self.driver.maximize_window()
-        if t != '':
+        if t != "":
             try:
                 WebDriverWait(self.driver, self.timeout, self.t).until(EC.title_contains(t))
-                self.log.info('打开网页成功！')
+                self.log.info("打开网页成功！")
             except TimeoutException as e:
-                self.log.error('打开 {} title错误，超时！ {}'.format(url, e))
+                # self.log.error("打开 {} title错误，超时！ {}".format(url, e))
+                raise ("打开 {} title错误，超时！ {}".format(url, e))
             except Exception as msg:
-                self.log.error('打开网页产生的其他错误：{}'.format(msg))
+                # self.log.error("打开网页产生的其他错误：{}".format(msg))
+                raise ("打开网页产生的其他错误：{}".format(msg))
 
     def find_element(self, locator):
         """重写元素定位方法"""
         if not isinstance(locator, tuple):
-            self.log.error('locator参数必须是元组类型，而不是：{}'.format(type(locator)))
-            return False  # 根据返回值判断是否定位到元素，使用频率很高
+            # self.log.error("locator参数必须是元组类型，而不是：{}".format(type(locator)))
+            raise ("locator参数必须是元组类型，而不是：{}".format(type(locator)))  # 根据返回值判断是否定位到元素，使用频率很高
         else:
             try:
                 element = WebDriverWait(self.driver, self.timeout, self.t).until(
                     EC.presence_of_element_located(locator))
                 if element.is_displayed():
                     return element
+                else:
+                    self.log.error("页面中元素 %s 不可见." % (locator))
+                    return False
             except:
-                self.log.warning('%s页面中未能找到元素%s' % (self, locator))
+                self.log.error("页面中未能找到元素 %s " % (locator))
                 return False
 
     def find_elements(self, locator):
         """定位一组元素"""
         if not isinstance(locator, tuple):
-            self.log.error('locator参数必须是元组类型，而不是：{}'.format(type(locator)))
-            return False
+            # self.log.error("locator参数必须是元组类型，而不是：{}".format(type(locator)))
+            raise ("locator参数必须是元组类型，而不是：{}".format(type(locator)))
         else:
             try:
                 elements = WebDriverWait(self.driver, self.timeout, self.t).until(
                     EC.presence_of_all_elements_located(locator))
                 return elements
             except:
-                self.log.info('%s页面中未能找到元素%s' % (self, locator))
+                self.log.info("页面中未能找到元素 %s" % (locator))
                 return False
 
     def clicks(self, locator, n):
         """点击一组元组中的一个"""
         element = self.find_elements(locator)[n]
-        element.click()
+        if element:
+            element.click()
+        else:
+            raise element_not_click_error
 
     def click(self, locator):
         """点击操作"""
         element = self.find_element(locator)
-        element.click()
+        if element:
+            element.click()
+        else:
+            raise element_not_click_error
 
     def double_click(self, locator):
         """双击操作"""
         element = self.find_element(locator)
-        self.action.double_click(element).perform()
+        if element:
+            self.action.double_click(element).perform()
+        else:
+            raise element_not_click_error
 
     def send_keys(self, locator, text):
         """发送文本，清空后输入"""
         element = self.find_element(locator)
-        element.clear()
-        element.send_keys(text)
+        if element:
+            element.clear()
+            element.send_keys(text)
+        else:
+            raise element_not_input_error
 
     def sends_keys(self, locator, text, n):
         """选中一组元素中的一个，发送文本，清空后输入"""
         element = self.find_elements(locator)[n]
-        element.clear()
-        element.send_keys(text)
+        if element:
+            element.clear()
+            element.send_keys(text)
+        else:
+            raise element_not_input_error
 
     # ================================================App===============================================================
 
@@ -196,23 +222,23 @@ class Crazy:
         element_obj.move_to(element1).wait(1000).perform()
 
     def swipeDown(self, t=500, n=1):
-        '''向下滑动屏幕'''
+        """向下滑动屏幕"""
         time.sleep(2)
         l = self.driver.get_window_size()
-        x1 = l['width'] * 0.5  # x坐标
-        y1 = l['height'] * 0.25  # 起始y坐标
-        y2 = l['height'] * 0.85  # 终点y坐标
+        x1 = l["width"] * 0.5  # x坐标
+        y1 = l["height"] * 0.25  # 起始y坐标
+        y2 = l["height"] * 0.85  # 终点y坐标
         for i in range(n):
             time.sleep(0.5)
             self.driver.swipe(x1, y1, x1, y2, t)
 
     def swipeUp(self, t=500, n=1):
-        '''向上滑动屏幕'''
+        """向上滑动屏幕"""
         time.sleep(2)
         l = self.driver.get_window_size()
-        x1 = l['width'] * 0.5  # x坐标
-        y1 = l['height'] * 0.65  # 起始y坐标
-        y2 = l['height'] * 0.25  # 终点y坐标
+        x1 = l["width"] * 0.5  # x坐标
+        y1 = l["height"] * 0.65  # 起始y坐标
+        y2 = l["height"] * 0.25  # 终点y坐标
         for i in range(n):
             time.sleep(0.5)
             self.driver.swipe(x1, y1, x1, y2, t)
@@ -238,11 +264,11 @@ class Crazy:
         try:
             result = WebDriverWait(self.driver, self.timeout, self.t).until(
                 EC.text_to_be_present_in_element(locator, text))
-            self.log.info('is_text_in_element     成功')
+            self.log.info("is_text_in_element     成功")
             return result
         except TimeoutException:
-            self.log.error('%s元素没有定位到' % str(locator))
-            return False
+            # self.log.error("%s元素没有定位到" % str(locator))
+            raise (" %s 元素没有定位到" % str(locator))
 
     def is_text_in_value(self, locator, value):
         """判断元素的value值，没有定位到返回False，定位到返回判断结果布尔值"""
@@ -250,8 +276,8 @@ class Crazy:
             result = WebDriverWait(self.driver, self.timeout, self.t).until(
                 EC.text_to_be_present_in_element_value(locator, value))
         except TimeoutException:
-            self.log.error('元素没有定位到：%s' % str(locator))
-            return False
+            # self.log.error("元素的value值没有定位到：%s" % str(locator))
+            raise (" %s 元素的value值没有定位到" % str(locator))
         else:
             return result
 
@@ -281,9 +307,9 @@ class Crazy:
         result = WebDriverWait(self.driver, self.timeout, self.t).until((EC.alert_is_present()))
         text = EC.alert_is_present()(self.driver)
         if text:
-            self.log.info('alert弹框显示文本是：%s' % text.text)
+            self.log.info("alert弹框显示文本是：%s" % text.text)
         else:
-            self.log.warning('没有发现alert弹框。')
+            self.log.warning("没有发现alert弹框。")
         return result
 
     def is_visibility(self, locator):
@@ -323,7 +349,8 @@ class Crazy:
             else:
                 self.move(locator, locator1)
         except ElementNotVisibleException as e:
-            self.log.error('鼠标点击事件失败：%s' % e)
+            # self.log.error("鼠标点击事件失败：%s" % e)
+            raise ("鼠标点击事件失败：%s" % e)
 
     def switch_frame(self, frame):
         """判断该frame是否可以switch进去，如果可以的话，返回True并且switch进去，否则返回False
@@ -333,11 +360,13 @@ class Crazy:
             result = WebDriverWait(self.driver, self.timeout, self.t).until(
                 EC.frame_to_be_available_and_switch_to_it(frame))
             if result:
-                self.log.info('切换iframe成功！')
+                self.log.info("切换iframe成功！")
             else:
-                self.log.warning('frame 切换失败！')
+                # self.log.warning("frame 切换失败！")
+                raise ("frame 切换失败！")
         except TimeoutException:
-            self.log.warning('没有发现iframe元素%s' % frame)
+            # self.log.warning("没有发现iframe元素%s" % frame)
+            raise ("没有发现iframe元素%s" % frame)
 
     def current_window_handle(self):
         """浏览器handle"""
@@ -374,24 +403,17 @@ class Crazy:
     def get_texts(self, locator, n):
         """获取一组相同元素中的指定文本"""
         element = self.find_elements(locator)[n]
-        if element:
-            return element.text
-        else:
-            return None
+        return element.text
 
     def get_text(self, locator):
         """获取文本"""
         element = self.find_element(locator)
-        if element:
-            return element.text
-        else:
-            return False
+        return element.text
 
     def get_attribute(self, locator, name):
         """获取属性"""
         element = self.find_element(locator)
-        if element:
-            return element.get_attribute(name)
+        return element.get_attribute(name)
 
     def js_execute(self, js):
         """执行js"""
@@ -439,10 +461,10 @@ class Crazy:
         """获取元素截图"""
         self.driver.save_screenshot(img_path)
         element = self.find_element(locator)
-        left = element.location['x']
-        top = element.location['y']
-        right = element.location['x'] + element.size['width']
-        bottom = element.location['y'] + element.size['height']
+        left = element.location["x"]
+        top = element.location["y"]
+        right = element.location["x"] + element.size["width"]
+        bottom = element.location["y"] + element.size["height"]
         im = Image.open(img_path)
         im = im.crop((left, top, right, bottom))
         im.save(img_path)
@@ -452,7 +474,7 @@ class Crazy:
         return self.driver.get_cookies()
 
 
-if __name__ == '__main__':
-    driver = open_browser('firefox')
+if __name__ == "__main__":
+    driver = open_browser("firefox")
     c = Crazy(driver)
-    c.open('https://dev.edu.xxbmm.com/zh/user/user')
+    c.open("https://dev.edu.xxbmm.com/zh/user/user")
