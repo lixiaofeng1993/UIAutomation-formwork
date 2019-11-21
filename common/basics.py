@@ -368,6 +368,10 @@ class Crazy:
             # self.log.warning("没有发现iframe元素%s" % frame)
             raise ("没有发现iframe元素%s" % frame)
 
+    def skip_frame(self):
+        "跳出frame"
+        self.driver.switch_to.default_content()
+
     def current_window_handle(self):
         """浏览器handle"""
         return self.driver.current_window_handle
