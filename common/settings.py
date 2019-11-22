@@ -12,6 +12,24 @@ pattern = '/' if platform.system() != 'Windows' else '\\'
 file_not_exists_error = "文件路径：{} 不存在，请检查并添加."
 
 
+class CustomException(Exception):
+    """自定义异常类"""
+
+    def __init__(self, error):
+        self.error = error
+
+    def __str__(self):
+        exception_msg = "Message: %s\n" % self.error
+        return exception_msg
+
+
+class NoTextFountException(CustomException):
+    """
+    没有发现文本异常
+    """
+    pass
+
+
 def check_dir(path):
     """
     检查目录是否存在，不存在则创建目录
