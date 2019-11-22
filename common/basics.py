@@ -302,12 +302,30 @@ class Crazy:
             EC.element_located_selection_state_to_be(locator, selected))
         return result
 
-    def is_alert_present(self):
+    def is_alert_present(self, alert=0, text=""):
         """判断页面是否有alert，有返回alert，没有返回False"""
+        if not isinstance(alert, int):
+            raise TypeError("alert参数必须是int类型.")
         result = WebDriverWait(self.driver, self.timeout, self.t).until((EC.alert_is_present()))
-        text = EC.alert_is_present()(self.driver)
-        if text:
-            self.log.info("alert弹框显示文本是：%s" % text.text)
+        alert = EC.alert_is_present()(self.driver)
+        if alert:
+            self.log.info("alert弹框显示文本是：{}".format(alert.text))
+            if alert == 0:
+                self.log.info("点击确认按钮中...")
+                alert.accept()
+            elif alert == 1:
+                self.log.info("点击取消按钮中...")
+                alert.dismiss()
+            elif alert == 2:
+                self.log.info("输入文本并点击确认按钮中...")
+                alert.send_keys(text)
+                alert.accept()
+            elif alert == 3:
+                self.log.info("输入文本并点击取消按钮中...")
+                alert.send_keys(text)
+                alert.dismiss()
+            else:
+                self.log.info("参数输入有误，请核实后再进行的操作！")
         else:
             self.log.warning("没有发现alert弹框。")
         return result
@@ -377,7 +395,7 @@ class Crazy:
         self.driver.switch_to.parent_frame()
 
     def current_window_handle(self):
-        """浏览器handle"""
+        """当前浏览器handle"""
         return self.driver.current_window_handle
 
     def switch_window_handle(self, n):
