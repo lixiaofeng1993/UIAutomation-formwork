@@ -104,7 +104,7 @@ class Crazy:
         self.driver = driver
         self.action = ActionChains(self.driver)
         self.touch = TouchAction(self.driver)
-        self.timeout = 5  # 显示等待超时时间
+        self.timeout = 10 # 显示等待超时时间
         self.t = 1
         self.log = Log()
 
@@ -114,7 +114,7 @@ class Crazy:
         try:
             self.driver.get(url)
         except TimeoutException as e:
-            self.log.error("打开{} 页面加载超时！".format(url))
+            self.log.error("打开{} 页面加载超时！{}".format(url, e))
             self.driver.execute_script("window.stop()")
         # 是否最大化浏览器
         if read_config.maximize != "True":
@@ -405,6 +405,7 @@ class Crazy:
             self.driver.switch_to.window(n)
         else:
             all_handle = self.driver.window_handles
+            print(all_handle)
             self.driver.switch_to.window(all_handle[n])
 
     def back(self):

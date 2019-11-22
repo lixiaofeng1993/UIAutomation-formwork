@@ -1,0 +1,40 @@
+[32m[2019-11-22 18:31:46,983] [logger.py:98] [logger:__console] [INFO]- start browser name :Chrome[0m
+[31m[2019-11-22 18:31:57,565] [logger.py:104] [logger:__console] [ERROR]- 打开http://www.easytest.xyz/login_action/ 页面加载超时！[0m
+[32m[2019-11-22 18:33:58,363] [logger.py:98] [logger:__console] [INFO]- start browser name :Chrome[0m
+[32m[2019-11-22 18:34:17,233] [logger.py:98] [logger:__console] [INFO]- start browser name :Chrome[0m
+[32m[2019-11-22 18:34:53,367] [logger.py:98] [logger:__console] [INFO]- start browser name :Chrome[0m
+[32m[2019-11-22 18:35:17,903] [logger.py:98] [logger:__console] [INFO]- start browser name :Chrome[0m
+[31m[2019-11-22 18:35:28,375] [logger.py:104] [logger:__console] [ERROR]- 打开http://www.easytest.xyz/index/ 页面加载超时！[0m
+[32m[2019-11-22 18:36:14,197] [logger.py:98] [logger:__console] [INFO]- start browser name :Chrome[0m
+[31m[2019-11-22 18:36:24,640] [logger.py:104] [logger:__console] [ERROR]- 打开http://www.easytest.xyz/index/ 页面加载超时！Message: timeout
+  (Session info: chrome=78.0.3904.97)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.18362 x86_64)
+[0m
+[32m[2019-11-22 18:37:38,288] [logger.py:98] [logger:__console] [INFO]- start browser name :Chrome[0m
+[31m[2019-11-22 18:37:48,740] [logger.py:104] [logger:__console] [ERROR]- 打开http://www.easytest.xyz/index/ 页面加载超时！Message: timeout
+  (Session info: chrome=78.0.3904.97)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.18362 x86_64)
+[0m
+[32m[2019-11-22 18:38:35,510] [logger.py:98] [logger:__console] [INFO]- start browser name :Firefox[0m
+[31m[2019-11-22 18:38:46,320] [logger.py:104] [logger:__console] [ERROR]- 打开http://www.easytest.xyz/index/ 页面加载超时！Message: Timeout loading page after 5000ms
+[0m
+[32m[2019-11-22 18:38:46,596] [logger.py:98] [logger:__console] [INFO]- 打开网页成功！[0m
+[32m[2019-11-22 18:39:58,487] [logger.py:98] [logger:__console] [INFO]- start browser name :Firefox[0m
+[31m[2019-11-22 18:40:09,235] [logger.py:104] [logger:__console] [ERROR]- 打开http://www.easytest.xyz/index/ 页面加载超时！Message: Timeout loading page after 5000ms
+[0m
+[32m[2019-11-22 18:40:09,525] [logger.py:98] [logger:__console] [INFO]- 打开网页成功！[0m
+[32m[2019-11-22 18:42:03,067] [logger.py:98] [logger:__console] [INFO]- start browser name :Firefox[0m
+[32m[2019-11-22 18:42:14,201] [logger.py:98] [logger:__console] [INFO]- 打开网页成功！[0m
+[32m[2019-11-22 18:42:23,042] [logger.py:98] [logger:__console] [INFO]- 登录成功！[0m
+[32m[2019-11-22 18:42:58,941] [logger.py:98] [logger:__console] [INFO]- start browser name :Chrome[0m
+[32m[2019-11-22 18:43:11,593] [logger.py:98] [logger:__console] [INFO]- 打开网页成功！[0m
+[32m[2019-11-22 18:43:20,350] [logger.py:98] [logger:__console] [INFO]- 登录成功！[0m
+[32m[2019-11-22 18:44:53,378] [logger.py:98] [logger:__console] [INFO]- start browser name :Chrome[0m
+[32m[2019-11-22 18:45:06,166] [logger.py:98] [logger:__console] [INFO]- 打开网页成功！[0m
+[32m[2019-11-22 18:45:14,935] [logger.py:98] [logger:__console] [INFO]- 登录成功！[0m
+[32m[2019-11-22 18:46:55,806] [logger.py:98] [logger:__console] [INFO]- start browser name :Chrome[0m
+[32m[2019-11-22 18:47:08,575] [logger.py:98] [logger:__console] [INFO]- 打开网页成功！[0m
+[32m[2019-11-22 18:47:17,255] [logger.py:98] [logger:__console] [INFO]- 登录成功！[0m
+[32m[2019-11-22 18:47:37,352] [logger.py:98] [logger:__console] [INFO]- start browser name :Chrome[0m
+[32m[2019-11-22 18:47:50,707] [logger.py:98] [logger:__console] [INFO]- 打开网页成功！[0m
+[32m[2019-11-22 18:47:59,512] [logger.py:98] [logger:__console] [INFO]- 登录成功！[0m

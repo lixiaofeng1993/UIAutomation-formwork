@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e2d19cf-d993-443b-8223-9f69566cb5ac" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/case/test_easytest_login.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/easytest_login_page.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/basics.py" afterPath="$PROJECT_DIR$/common/basics.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/settings.py" afterPath="$PROJECT_DIR$/common/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/cfg.ini" afterPath="$PROJECT_DIR$/config/cfg.ini" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,6 +28,7 @@
     <SUITE FILE_PATH="coverage/UIAutomation-formwork$py_test_in_TestDemo.coverage" NAME="py.test in TestDemo Coverage Results" MODIFIED="1573978353399" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/UIAutomation-formwork$random_upload.coverage" NAME="random_upload Coverage Results" MODIFIED="1573030015495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
     <SUITE FILE_PATH="coverage/UIAutomation-formwork$py_test_in_test_login_test_py.coverage" NAME="py.test in test_login_test.py Coverage Results" MODIFIED="1573978560198" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/UIAutomation-formwork$test_easytest_login.coverage" NAME="test_easytest_login Coverage Results" MODIFIED="1574419657075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
     <SUITE FILE_PATH="coverage/UIAutomation-formwork$test_login_test.coverage" NAME="test_login_test Coverage Results" MODIFIED="1573993476691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/UIAutomation-formwork$test_demo.coverage" NAME="test_demo Coverage Results" MODIFIED="1573978274646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/Geek_AppAutomationTesting/DEMO" />
     <SUITE FILE_PATH="coverage/UIAutomation-formwork$settings.coverage" NAME="settings Coverage Results" MODIFIED="1573036179476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
@@ -41,8 +44,8 @@
       <file leaf-file-name="test_login.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/case/test_login.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="771">
-              <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+            <state relative-caret-position="595">
+              <caret line="47" column="39" lean-forward="false" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
               <folding>
                 <element signature="e#118#154#0" expanded="true" />
               </folding>
@@ -53,7 +56,7 @@
       <file leaf-file-name="test_login_test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/case/test_login_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="880">
+            <state relative-caret-position="573">
               <caret line="40" column="25" lean-forward="false" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
               <folding>
                 <element signature="e#118#154#0" expanded="true" />
@@ -62,33 +65,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="city.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/city.py">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="16" column="50" lean-forward="true" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
+            <state relative-caret-position="462">
+              <caret line="27" column="26" lean-forward="false" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="logger.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/logger.py">
+      <file leaf-file-name="webdriver.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/python/Lib/site-packages/selenium/webdriver/remote/webdriver.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-              <folding>
-                <element signature="e#15#29#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/common/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="30" column="7" lean-forward="false" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+            <state relative-caret-position="118">
+              <caret line="922" column="8" lean-forward="false" selection-start-line="922" selection-start-column="8" selection-end-line="922" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -97,11 +88,66 @@
       <file leaf-file-name="basics.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/basics.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="46" column="21" lean-forward="false" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="21" />
+            <state relative-caret-position="64">
+              <caret line="401" column="28" lean-forward="false" selection-start-line="401" selection-start-column="8" selection-end-line="401" selection-end-column="28" />
               <folding>
                 <element signature="e#127#136#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cfg.ini" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/cfg.ini">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="32" column="36" lean-forward="false" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_easytest_login.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/case/test_easytest_login.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="333">
+              <caret line="54" column="36" lean-forward="false" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
+              <folding>
+                <element signature="e#173#209#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="read_config.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/read_config.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="506">
+                <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="easytest_login_page.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page/easytest_login_page.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="41" column="46" lean-forward="false" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="46" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -117,7 +163,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>data_img_path</find>
       <find>self.touch</find>
       <find>getvalue</find>
       <find>name</find>
@@ -147,6 +192,7 @@
       <find>alert</find>
       <find>switch</find>
       <find>raise</find>
+      <find>sw</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;</replace>
@@ -174,7 +220,6 @@
         <option value="$PROJECT_DIR$/common/read_config.py" />
         <option value="$PROJECT_DIR$/case/1test_operate_manage.py" />
         <option value="$PROJECT_DIR$/page/weixin_login_page.py" />
-        <option value="$PROJECT_DIR$/config/cfg.ini" />
         <option value="$PROJECT_DIR$/case/test_weixin_login.py" />
         <option value="$PROJECT_DIR$/case/test_login_pytest.py" />
         <option value="D:/Geek_AppAutomationTesting/DEMO/test_demo.py" />
@@ -182,8 +227,11 @@
         <option value="$PROJECT_DIR$/page/login_page.py" />
         <option value="$PROJECT_DIR$/case/test_login_test.py" />
         <option value="$PROJECT_DIR$/run_this.py" />
-        <option value="$PROJECT_DIR$/common/basics.py" />
         <option value="$PROJECT_DIR$/common/settings.py" />
+        <option value="$PROJECT_DIR$/config/cfg.ini" />
+        <option value="$PROJECT_DIR$/page/easytest_login_page.py" />
+        <option value="$PROJECT_DIR$/common/basics.py" />
+        <option value="$PROJECT_DIR$/case/test_easytest_login.py" />
       </list>
     </option>
   </component>
@@ -338,20 +386,20 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
     <property name="nodejs_interpreter_path" value="D:/nodejs/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/mysite" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/case/test_easytest_login.py" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="D:\nodejs\node.exe" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\UIAutomation-formwork\page" />
       <recent name="D:\UIAutomation-formwork\driver" />
       <recent name="D:\UIAutomation-formwork\case" />
       <recent name="D:\UIAutomation-formwork\common" />
       <recent name="D:\UIAutomation-formwork\data\txt" />
-      <recent name="D:\UIAutomation-formwork\logs" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.city">
+  <component name="RunManager" selected="Python.test_easytest_login">
     <configuration default="false" name="run_this" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -656,6 +704,24 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
+    <configuration default="false" name="test_easytest_login" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="D:\python\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="UIAutomation-formwork" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/case/test_easytest_login.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
     <configuration default="false" name="test_login_test" type="tests" factoryName="py.test">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -681,13 +747,14 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="6">
+    <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Python.test_login" />
       <item index="1" class="java.lang.String" itemvalue="Python.test_weixin_login" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.test_login_test" />
-      <item index="3" class="java.lang.String" itemvalue="Python.run_this" />
-      <item index="4" class="java.lang.String" itemvalue="Python.test_demo" />
-      <item index="5" class="java.lang.String" itemvalue="Python.city" />
+      <item index="2" class="java.lang.String" itemvalue="Python.test_easytest_login" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.test_login_test" />
+      <item index="4" class="java.lang.String" itemvalue="Python.run_this" />
+      <item index="5" class="java.lang.String" itemvalue="Python.test_demo" />
+      <item index="6" class="java.lang.String" itemvalue="Python.city" />
     </list>
     <recent_temporary>
       <list size="3">
@@ -752,7 +819,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25751072" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37553647" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31866953" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -779,14 +846,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/report/2019-11-06 16-13-28report.html" />
-    <entry file="file://D:/python/Lib/subprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="765" column="0" lean-forward="false" selection-start-line="765" selection-start-column="0" selection-end-line="765" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/random_upload.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="968">
@@ -808,16 +867,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="621">
-            <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/connect_db.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
@@ -830,13 +879,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="428" column="20" lean-forward="false" selection-start-line="428" selection-start-column="20" selection-end-line="428" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/read_config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="783">
-          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1016,22 +1058,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/python/Lib/site-packages/selenium/webdriver/remote/webdriver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="156" column="29" lean-forward="false" selection-start-line="156" selection-start-column="29" selection-end-line="156" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/cfg.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="41" column="5" lean-forward="false" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharm2016.3/system/python_stubs/-287100998/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
@@ -1054,26 +1080,6 @@
           <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
           <folding>
             <element signature="e#15#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/case/test_login_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="880">
-          <caret line="40" column="25" lean-forward="false" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
-          <folding>
-            <element signature="e#118#154#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/case/test_login.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="771">
-          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding>
-            <element signature="e#118#154#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1102,14 +1108,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/python/Lib/site-packages/selenium/webdriver/support/expected_conditions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="386" column="37" lean-forward="true" selection-start-line="386" selection-start-column="37" selection-end-line="386" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/python/Lib/site-packages/selenium/webdriver/remote/switch_to.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="423">
@@ -1128,21 +1126,102 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://D:/python/Lib/site-packages/selenium/webdriver/support/expected_conditions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="240" column="13" lean-forward="false" selection-start-line="240" selection-start-column="13" selection-end-line="240" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/case/test_login_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="573">
+          <caret line="40" column="25" lean-forward="false" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+          <folding>
+            <element signature="e#118#154#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/case/test_login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="47" column="39" lean-forward="false" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
+          <folding>
+            <element signature="e#118#154#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="506">
+            <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/read_config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/python/Lib/site-packages/selenium/webdriver/remote/webdriver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="922" column="8" lean-forward="false" selection-start-line="922" selection-start-column="8" selection-end-line="922" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="27" column="26" lean-forward="false" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/cfg.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="32" column="36" lean-forward="false" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/easytest_login_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="41" column="46" lean-forward="false" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/common/basics.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="46" column="21" lean-forward="false" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="21" />
+        <state relative-caret-position="64">
+          <caret line="401" column="28" lean-forward="false" selection-start-line="401" selection-start-column="8" selection-end-line="401" selection-end-column="28" />
           <folding>
             <element signature="e#127#136#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/settings.py">
+    <entry file="file://$PROJECT_DIR$/case/test_easytest_login.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="30" column="7" lean-forward="false" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
-          <folding />
+        <state relative-caret-position="333">
+          <caret line="54" column="36" lean-forward="false" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
+          <folding>
+            <element signature="e#173#209#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
