@@ -10,6 +10,8 @@ import os, platform, time
 
 pattern = '/' if platform.system() != 'Windows' else '\\'
 file_not_exists_error = "文件路径：{} 不存在，请检查并添加."
+element_not_click_error = "元素定位异常，无法点击."
+element_not_input_error = "元素定位异常，无法输入."
 
 
 class CustomException(Exception):

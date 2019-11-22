@@ -18,10 +18,8 @@ from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.wait import WebDriverWait
 from common.logger import Log
 from common import read_config
-from common.settings import driver_path, check_file, file_not_exists_error  # 驱动路径
-
-element_not_click_error = ("元素定位异常，无法点击.")
-element_not_input_error = ("元素定位异常，无法点击.")
+from common.settings import driver_path, check_file, file_not_exists_error, element_not_click_error, \
+    element_not_input_error  # 驱动路径
 
 
 def open_browser(browser="chrome"):
@@ -95,7 +93,7 @@ def open_app():
         driver = app.Remote("http://127.0.0.1:4723/wd/hub", desired_caps)
         return driver
     except Exception as e:
-        raise Exception("连接 Appium 出错：{}".format(e))
+        raise ("连接 Appium 出错：{}".format(e))
 
 
 class Crazy:
@@ -136,7 +134,7 @@ class Crazy:
         """重写元素定位方法"""
         if not isinstance(locator, tuple):
             # self.log.error("locator参数必须是元组类型，而不是：{}".format(type(locator)))
-            raise ("locator参数必须是元组类型，而不是：{}".format(type(locator)))  # 根据返回值判断是否定位到元素，使用频率很高
+            raise TypeError("locator参数必须是元组类型，而不是：{}".format(type(locator)))  # 根据返回值判断是否定位到元素，使用频率很高
         else:
             try:
                 element = WebDriverWait(self.driver, self.timeout, self.t).until(
@@ -154,7 +152,7 @@ class Crazy:
         """定位一组元素"""
         if not isinstance(locator, tuple):
             # self.log.error("locator参数必须是元组类型，而不是：{}".format(type(locator)))
-            raise ("locator参数必须是元组类型，而不是：{}".format(type(locator)))
+            raise TypeError("locator参数必须是元组类型，而不是：{}".format(type(locator)))
         else:
             try:
                 elements = WebDriverWait(self.driver, self.timeout, self.t).until(
@@ -304,9 +302,13 @@ class Crazy:
 
     def is_alert_present(self, opera=0, text=""):
         """判断页面是否有alert，有返回alert，没有返回False"""
+        result = WebDriverWait(self.driver, self.timeout, self.t).until((EC.alert_is_present()))
+        return result
+
+    def alert_operations(self, opera=0, text=""):
+        """确认alert存在后，可以进行的操作"""
         if not isinstance(opera, int):
             raise TypeError("alert参数必须是int类型.")
-        result = WebDriverWait(self.driver, self.timeout, self.t).until((EC.alert_is_present()))
         alert = EC.alert_is_present()(self.driver)
         if alert:
             self.log.info("alert弹框显示文本是：{}".format(alert.text))
@@ -325,10 +327,9 @@ class Crazy:
                 alert.send_keys(text)
                 alert.dismiss()
             else:
-                self.log.info("参数输入有误，请核实后再进行的操作！")
+                self.log.warning("参数输入有误，请核实后再进行的操作！")
         else:
             self.log.warning("没有发现alert弹框。")
-        return result
 
     def is_visibility(self, locator):
         """元素可见返回本身，不可见返回False"""
