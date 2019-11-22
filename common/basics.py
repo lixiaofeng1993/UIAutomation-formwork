@@ -302,25 +302,25 @@ class Crazy:
             EC.element_located_selection_state_to_be(locator, selected))
         return result
 
-    def is_alert_present(self, alert=0, text=""):
+    def is_alert_present(self, opera=0, text=""):
         """判断页面是否有alert，有返回alert，没有返回False"""
-        if not isinstance(alert, int):
+        if not isinstance(opera, int):
             raise TypeError("alert参数必须是int类型.")
         result = WebDriverWait(self.driver, self.timeout, self.t).until((EC.alert_is_present()))
         alert = EC.alert_is_present()(self.driver)
         if alert:
             self.log.info("alert弹框显示文本是：{}".format(alert.text))
-            if alert == 0:
+            if opera == 0:
                 self.log.info("点击确认按钮中...")
                 alert.accept()
-            elif alert == 1:
+            elif opera == 1:
                 self.log.info("点击取消按钮中...")
                 alert.dismiss()
-            elif alert == 2:
+            elif opera == 2:
                 self.log.info("输入文本并点击确认按钮中...")
                 alert.send_keys(text)
                 alert.accept()
-            elif alert == 3:
+            elif opera == 3:
                 self.log.info("输入文本并点击取消按钮中...")
                 alert.send_keys(text)
                 alert.dismiss()
