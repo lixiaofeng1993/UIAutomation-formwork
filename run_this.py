@@ -38,7 +38,7 @@ def run_case(all_case, report_path):
 
     # BeautifulReport
     result = BeautifulReport(all_case)
-    result.report(filename=now + 'report.html', description=read_config.title, log_path=report_path)
+    result.report(filename=now + 'report.html', description=read_config.title, report_dir=report_path)
     Log().info('执行用例，生成HTML报告!')
 
 

@@ -114,7 +114,7 @@ class Crazy:
         try:
             self.driver.get(url)
         except TimeoutException as e:
-            self.log.error("打开{} 页面加载超时！{}".format(url, e))
+            self.log.error("打开 {} 页面加载超时！{}".format(url, e))
             self.driver.execute_script("window.stop()")
         # 是否最大化浏览器
         if read_config.maximize != "True":

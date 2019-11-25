@@ -26,7 +26,7 @@ class LoginPage(Crazy):
     def click_btn(self):
         self.click(self.btn_loc)
 
-    user_img_loc = ("class name", "dropdown")
+    user_img_loc = ("class name", "dropdown1")
 
     def click_user_img(self):
         self.click(self.user_img_loc)

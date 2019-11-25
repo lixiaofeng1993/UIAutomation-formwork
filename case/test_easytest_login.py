@@ -40,6 +40,7 @@ class TestLogin(unittest.TestCase):
     def save_img(self, img_name):
         self.driver.get_screenshot_as_file('{}/{}.png'.format(self.img_path, img_name))
 
+    @BeautifulReport.add_test_img("test_login")
     def test_login(self):
         login = self.login
         login.open(self.url, t="login")

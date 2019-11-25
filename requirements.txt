@@ -8,3 +8,4 @@ selenium==3.141.0
 xlrd==1.2.0
 pymysql==0.9.3
 pymssql==2.1.4
+itchat
