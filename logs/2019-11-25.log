@@ -1,0 +1,31 @@
+[32m[2019-11-25 14:51:20,527] [logger.py:98] [logger:__console] [INFO]- start browser name :Chrome[0m
+[32m[2019-11-25 14:51:35,446] [logger.py:98] [logger:__console] [INFO]- 打开网页成功！[0m
+[32m[2019-11-25 14:51:44,173] [logger.py:98] [logger:__console] [INFO]- 登录成功！[0m
+[32m[2019-11-25 14:59:15,198] [logger.py:98] [logger:__console] [INFO]- 数据库连接成功[0m
+[32m[2019-11-25 14:59:31,535] [logger.py:98] [logger:__console] [INFO]- 数据库连接成功[0m
+[32m[2019-11-25 15:10:30,926] [logger.py:98] [logger:__console] [INFO]- 数据库连接成功[0m
+[31m[2019-11-25 15:10:30,933] [logger.py:104] [logger:__console] [ERROR]- 执行SQL语句出现异常：(1146, "Table 'sign_db_test.user_tbl' doesn't exist")[0m
+[32m[2019-11-25 15:10:37,861] [logger.py:98] [logger:__console] [INFO]- 数据库连接成功[0m
+[31m[2019-11-25 15:10:37,868] [logger.py:104] [logger:__console] [ERROR]- 执行SQL语句出现异常：(1146, "Table 'sign_db_test.user_tbl' doesn't exist")[0m
+[32m[2019-11-25 15:11:24,955] [logger.py:98] [logger:__console] [INFO]- 数据库连接成功[0m
+[31m[2019-11-25 15:11:24,964] [logger.py:104] [logger:__console] [ERROR]- 执行SQL语句出现异常：(1146, "Table 'sign_db_test.user_tbl' doesn't exist")[0m
+[32m[2019-11-25 15:11:39,294] [logger.py:98] [logger:__console] [INFO]- 数据库连接成功[0m
+[31m[2019-11-25 15:11:39,300] [logger.py:104] [logger:__console] [ERROR]- 执行SQL语句出现异常：(1054, "Unknown column '%道在%' in 'where clause'")[0m
+[32m[2019-11-25 15:11:55,767] [logger.py:98] [logger:__console] [INFO]- 数据库连接成功[0m
+[32m[2019-11-25 15:12:20,691] [logger.py:98] [logger:__console] [INFO]- 数据库连接成功[0m
+[31m[2019-11-25 15:12:20,700] [logger.py:104] [logger:__console] [ERROR]- 执行SQL语句出现异常：'NoneType' object is not subscriptable[0m
+[32m[2019-11-25 15:12:50,181] [logger.py:98] [logger:__console] [INFO]- 数据库连接成功[0m
+[32m[2019-11-25 15:20:07,389] [logger.py:98] [logger:__console] [INFO]- 本地 数据库连接成功[0m
+[32m[2019-11-25 15:23:24,069] [logger.py:98] [logger:__console] [INFO]- 本地 数据库连接成功[0m
+[32m[2019-11-25 15:24:42,419] [logger.py:98] [logger:__console] [INFO]- 本地 数据库连接成功[0m
+[32m[2019-11-25 15:26:46,653] [logger.py:98] [logger:__console] [INFO]- 本地 数据库连接成功[0m
+[32m[2019-11-25 15:27:28,767] [logger.py:98] [logger:__console] [INFO]- 本地 数据库连接成功[0m
+[32m[2019-11-25 15:27:36,198] [logger.py:98] [logger:__console] [INFO]- 本地 数据库连接成功[0m
+[32m[2019-11-25 15:27:46,907] [logger.py:98] [logger:__console] [INFO]- 本地 数据库连接成功[0m
+[32m[2019-11-25 15:29:29,841] [logger.py:98] [logger:__console] [INFO]- 本地 数据库连接成功[0m
+[32m[2019-11-25 15:34:27,640] [logger.py:98] [logger:__console] [INFO]- 数据库连接成功[0m
+[31m[2019-11-25 15:34:27,647] [logger.py:104] [logger:__console] [ERROR]- 执行SQL语句出现异常：(1146, "Table 'xxbmm-course_test.customer_tbl' doesn't exist")[0m
+[32m[2019-11-25 15:34:43,719] [logger.py:98] [logger:__console] [INFO]- 数据库连接成功[0m
+[32m[2019-11-25 15:35:26,075] [logger.py:98] [logger:__console] [INFO]- 数据库连接成功[0m
+[32m[2019-11-25 15:39:23,325] [logger.py:98] [logger:__console] [INFO]- 本地 数据库连接成功[0m
+[32m[2019-11-25 15:40:33,948] [logger.py:98] [logger:__console] [INFO]- 本地 数据库连接成功[0m

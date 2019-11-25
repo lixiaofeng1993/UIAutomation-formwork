@@ -14,14 +14,39 @@ class ConnectMySqL:
     def __init__(self):
         self.log = Log()
         """判断是否连接成功"""
+        self.to_connect()
+
+    def to_connect(self):
+        while True:
+            try:
+                self.conn = pymysql.connect(host=read_config.MySQL_host, database=read_config.MySQL_database,
+                                            user=read_config.MySQL_user,
+                                            password=read_config.MySQL_pwd, port=int(read_config.MySQL_port),
+                                            use_unicode=True, charset='utf8')
+                self.log.info('本地 数据库连接成功')
+                break
+            except Exception as e:
+                self.log.error('本地 数据库链接异常! {}'.format(e))
+                continue
+
+    def reconnect(self, dict_type, sql):
         try:
-            self.conn = pymysql.connect(host=read_config.MySQL_host, database=read_config.MySQL_database,
-                                        user=read_config.MySQL_user,
-                                        password=read_config.MySQL_pwd, port=int(read_config.MySQL_port),
-                                        charset='utf8')
-            self.log.info('数据库连接成功')
-        except Exception as e:
-            self.log.error('数据库链接异常! {}'.format(e))
+            self.conn.ping()  # pymysql.err.InterfaceError: (0, '')
+        except:
+            self.log.warning('数据库已断开，重连中...')
+            self.to_connect()
+        if dict_type:  # 返回数据字典类型
+            cur = self.conn.cursor(cursor=pymysql.cursors.DictCursor)
+        else:
+            cur = self.conn.cursor()
+        # try:
+        #     with cur as cur:
+        #         cur.execute(sql)  # 执行sql
+        #     return cur
+        # except Exception as e:
+        #     self.conn.rollback()
+        #     self.log.error('执行SQL语句出现异常：{}'.format(e))
+        return cur
 
     def execute_sql(self, sql, dict_type=False, num=1):
         """返回查询结果集
@@ -29,22 +54,25 @@ class ConnectMySqL:
             dict_type: 是否返回的数据是字典类型；
             num： 返回的数据是一个还是多个
         """
-        if dict_type:  # 返回数据字典类型
-            cur = self.conn.cursor(cursor=pymysql.cursors.DictCursor)
-        else:
-            cur = self.conn.cursor()
+        cur = self.reconnect(dict_type, sql)
+        if not cur:
+            self.log.error('sql执行，查询数据失败！！！')
+            return None
         try:
             with cur as cur:
                 cur.execute(sql)  # 执行sql
-            if 'delete' in sql:
+            if 'delete' in sql or 'insert' in sql or 'update' in sql:
                 self.conn.commit()  # 提交
             else:
                 if num == 1:  # 返回一条数据
                     data = cur.fetchone()
-                    if dict_type:
-                        return data
+                    if data:
+                        if dict_type:
+                            return data
+                        else:
+                            return data[0]
                     else:
-                        return data[0]
+                        return None
                 else:  # 返回多条数据
                     data_str = ''
                     data = cur.fetchall()
@@ -106,5 +134,6 @@ def decimal_format(self, money):
 
 if __name__ == '__main__':
     r = ConnectMySqL()
-    data = r.execute_sql("select ct.id from customer_tbl as ct ;", num=2)
+    data = r.execute_sql("select ct.id from user_tbl as ct ;", num=2)
     data = data.split(',')
+    print(data)
