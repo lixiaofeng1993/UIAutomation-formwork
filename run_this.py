@@ -80,17 +80,17 @@ def send_email(user, pwd, user_163, pwd_163, _to, smtp_service, smtp_service_163
     msg["Accept-Charset"] = "ISO-8859-1,utf-8"
     # 邮件正文
     part = MIMEText('{} UI自动化测试完成，测试报告见附件，请注意查看...'.format(read_config.title))
+    # with open(report_file, 'rb') as f:
+    #     mail_body = f.read()
+    # body = MIMEText(mail_body, 'html', 'utf-8')
+    msg.attach(part)
+    Log().info('写入邮件正文')
     if os.path.splitext(report_file)[1] == '.html':
-        # with open(report_file, 'rb') as f:
-        #     mail_body = f.read()
-        # body = MIMEText(mail_body, 'html', 'utf-8')
-        msg.attach(part)
-        Log().info('写入邮件正文')
-    att = MIMEText(open(report_file, 'rb').read(), 'base64', 'utf-8')  # 添加多个附件
-    att['Content-Type'] = 'application/octet-stream'
-    att['Content-Disposition'] = 'attach;filename=' + report_file[-11:]
-    msg.attach(att)
-    Log().info('添加邮件附件')
+        att = MIMEText(open(report_file, 'rb').read(), 'base64', 'utf-8')  # 添加多个附件
+        att['Content-Type'] = 'application/octet-stream'
+        att['Content-Disposition'] = 'attach;filename=' + report_file[-11:]
+        msg.attach(att)
+        Log().info('添加邮件附件')
     try:
         try:
             s = smtplib.SMTP()
