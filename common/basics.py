@@ -104,7 +104,7 @@ class Crazy:
         self.driver = driver
         self.action = ActionChains(self.driver)
         self.touch = TouchAction(self.driver)
-        self.timeout = 10 # 显示等待超时时间
+        self.timeout = 10  # 显示等待超时时间
         self.t = 1
         self.log = Log()
 
@@ -302,8 +302,11 @@ class Crazy:
 
     def is_alert_present(self, opera=0, text=""):
         """判断页面是否有alert，有返回alert，没有返回False"""
-        result = WebDriverWait(self.driver, self.timeout, self.t).until((EC.alert_is_present()))
-        return result
+        try:
+            result = WebDriverWait(self.driver, self.timeout, self.t).until((EC.alert_is_present()))
+            return result
+        except TimeoutException:
+            return False
 
     def alert_operations(self, opera=0, text=""):
         """确认alert存在后，可以进行的操作"""
