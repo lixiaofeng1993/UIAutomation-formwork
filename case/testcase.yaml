@@ -1,0 +1,7 @@
+- id: tv_search
+- id: search_input_text
+  input: alibaba
+- id: name
+- id: current_price
+  get: text
+  eq: 100

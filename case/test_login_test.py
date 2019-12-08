@@ -17,7 +17,7 @@ from common.random_upload import uploaded
 from common import read_config
 from hamcrest import *
 
-import datetime
+import datetime, time
 from time import sleep
 
 import pytest
@@ -29,128 +29,80 @@ from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 from hamcrest import *
+from common.basics import open_app
+from page.xueqiu_page import XueQiuPage
+
 
 class TestDemo:
-    # search_data=yaml.safe_load(open("search.yaml", "r"))
-    # print(search_data)
+    search_data = yaml.safe_load(open("search.yaml", "r"))
+    print(search_data)
 
-    def setup(self):
-        caps = {}
-        caps["platformName"] = "android"
-        caps["deviceName"] = "GWY0217124003040"
-        caps["appPackage"] = "com.xueqiu.android"
-        caps["appActivity"] = ".view.WelcomeActivityAlias"
-        caps["autoGrantPermissions"] = "true"
-        caps["noReset"] = "true"
+    # @classmethod
+    def setup_class(self):
+        self.driver = open_app()
+        self.login = XueQiuPage(self.driver)
 
-        self.driver = webdriver.Remote("http://localhost:4723/wd/hub", caps)
-        self.driver.implicitly_wait(10)
-
-        # sleep(20)
-        # if len(self.driver.find_elements_by_id("image_cancel")) >=1:
-        #     self.driver.find_element_by_id("image_cancel").click()
-        #
-        #
-
-
-
-        # WebDriverWait(self.driver, 15).until(
-        #     expected_conditions.visibility_of_element_located((By.ID, "image_cancel"))
-        # )
-
-        def loaded(driver):
-            print(datetime.datetime.now())
-            if len(self.driver.find_elements_by_id("image_cancel")) >=1:
-                self.driver.find_element_by_id("image_cancel").click()
-                return True
-            else:
-                return False
-
-        try:
-            WebDriverWait(self.driver, 20).until(loaded)
-        except:
-            print("no update")
-
-
-    # def test_demo(self):
-    #     el1 = self.driver.find_element_by_id("com.xueqiu.android:id/home_search")
-    #     el1.click()
-    #     el2 = self.driver.find_element_by_id("com.xueqiu.android:id/search_input_text")
-    #     el2.send_keys("pdd")
-
-
-    def test_xpath(self):
-        self.driver.find_element_by_xpath("//*[@text='自选' and contains(@resource-id, 'tab_name') ]").click()
-
-    @pytest.mark.parametrize("keyword, expected_price", [
-        ("pdd", 20),
-        ("alibaba", 100),
-        ("jd",  10)
-    ])
-    def test_search(self, keyword, expected_price):
-        self.driver.find_element_by_id("com.xueqiu.android:id/home_search").click()
-        self.driver.find_element_by_id("com.xueqiu.android:id/search_input_text").send_keys(keyword)
-        self.driver.find_element_by_id("name").click()
-
-        price=self.driver.find_element_by_id("current_price")
-
-        assert float(price.text) > expected_price
-        assert "price" in price.get_attribute("resource-id")
-        assert_that(price.get_attribute("package"), equal_to("com.xueqiu.android"))
-
-
-    # @pytest.mark.parametrize("keyword, expected_price", search_data)
-    # def test_search_from_yaml(self, keyword, expected_price):
-    #     self.driver.find_element_by_id("com.xueqiu.android:id/home_search").click()
-    #     self.driver.find_element_by_id("com.xueqiu.android:id/search_input_text").send_keys(keyword)
-    #     self.driver.find_element_by_id("name").click()
+    # @pytest.mark.parametrize("keyword, expected_price", [
+    #     ("jingdong", 10),
+    #     ("alibaba", 100),
+    #     ("pdd", 20)
+    # ])
+    # def test_search(self, keyword, expected_price):
+    #     if self.login.element_skip_btn():
+    #         self.login.click_skip_btn()
+    #     if self.login.element_search_btn():
+    #         self.login.click_search_btn_loc()
+    #     self.login.input_search_input_text(keyword)
+    #     if not self.login.element_name_btn():
+    #         self.login.click_search_input_text()
+    #     self.login.click_name_btn()
     #
-    #     price=self.driver.find_element_by_id("current_price")
+    #     price = self.login.element_price()
     #
     #     assert float(price.text) > expected_price
     #     assert "price" in price.get_attribute("resource-id")
     #     assert_that(price.get_attribute("package"), equal_to("com.xueqiu.android"))
 
-    # def test_search_from_testcase(self):
-    #     TestCase("testcase.yaml").run(self.driver)
+    # @pytest.mark.parametrize("keyword, expected_price", search_data)
+    # def test_search(self):
+    #     TestCase("testcase.yaml").run(self.login)
 
+    def test_webview(self):
+        time.sleep(5)
+        self.login.element_deal_btn()[-2].click()
+        time.sleep(5)
+        for i in range(5):
+            time.sleep(1)
+            print(self.driver.contexts)
 
-    def teardown(self):
+    # @classmethod
+    def teardown_class(self):
         self.driver.quit()
+
 
 # class TestCase:
 #     def __init__(self, path):
-#         file=open(path, "r")
-#         self.steps=yaml.safe_load(file)
+#         with open(path, "r") as f:
+#             self.steps = yaml.safe_load(f)
+#             print(self.steps)
 #
-#
-#     def run(self, driver: WebDriver):
+#     def run(self, driver):
 #         for step in self.steps:
-#             element=None
-#             print(step)
-#
 #             if isinstance(step, dict):
 #                 if "id" in step.keys():
-#                     element=driver.find_element_by_id(step["id"])
+#                     time.sleep(3)
+#                     elelment = driver.find_element(("id", step["id"]))
 #                 elif "xpath" in step.keys():
-#                     element=driver.find_element_by_xpath(step["xpath"])
+#                     elelment = driver.find_element(("xpath", step["xpath"]))
 #                 else:
 #                     print(step.keys())
 #
 #                 if "input" in step.keys():
-#                     element.send_keys(step["input"])
-#                 else:
-#                     element.click()
-#
-#                 if "get" in step.keys():
-#                     text=element.get_attribute(step["get"])
+#                     elelment.send_keys(step["input"])
+#                 elif "get" in step.keys():
+#                     text = elelment.get_attribute(step["get"])
 #                     print(text)
-
-
-
-
-
-
-
-
-
+#                 elif "eq" in step.keys():
+#                     assert float(text) >  step["eq"]
+#                 else:
+#                     elelment.click()

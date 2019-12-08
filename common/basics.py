@@ -57,11 +57,11 @@ def open_browser(browser="chrome"):
             driver = webdriver.PhantomJS()
             return driver
         else:
-            # Log().warning("额，暂不支持此浏览器诶。先试试firefox、chrome、ie、phantomJS浏览器吧。")
-            raise ("额，暂不支持此浏览器诶。先试试firefox、chrome、ie、phantomJS浏览器吧。")
+            Log().warning("额，暂不支持此浏览器诶。先试试firefox、chrome、ie、phantomJS浏览器吧。")
+            raise NoSuchWindowException("额，暂不支持此浏览器诶。先试试firefox、chrome、ie、phantomJS浏览器吧。")
     except Exception as msg:
-        # Log().error("浏览器出错了呀！%s" % msg)
-        raise ("浏览器出错了呀！%s" % msg)
+        Log().error("浏览器出错了呀！{}".format(msg))
+        raise Exception("浏览器出错了呀！{}".format(msg))
 
 
 def open_app():
@@ -93,7 +93,7 @@ def open_app():
         driver = app.Remote("http://127.0.0.1:4723/wd/hub", desired_caps)
         return driver
     except Exception as e:
-        raise ("连接 Appium 出错：{}".format(e))
+        raise Exception("连接 Appium 出错：{}".format(e))
 
 
 class Crazy:
@@ -116,6 +116,7 @@ class Crazy:
         except TimeoutException as e:
             self.log.error("打开 {} 页面加载超时！{}".format(url, e))
             self.driver.execute_script("window.stop()")
+            raise TimeoutException("打开 {} 页面加载超时！{}".format(url, e))
         # 是否最大化浏览器
         if read_config.maximize != "True":
             self.driver.maximize_window()
@@ -124,16 +125,16 @@ class Crazy:
                 WebDriverWait(self.driver, self.timeout, self.t).until(EC.title_contains(t))
                 self.log.info("打开网页成功！")
             except TimeoutException as e:
-                # self.log.error("打开 {} title错误，超时！ {}".format(url, e))
-                raise ("打开 {} title错误，超时！ {}".format(url, e))
+                self.log.error("打开网页 {} 判断 title 出现错误！ {}".format(url, e))
+                raise TimeoutException("打开网页 {} 判断 title 出现错误！ {}".format(url, e))
             except Exception as msg:
-                # self.log.error("打开网页产生的其他错误：{}".format(msg))
-                raise ("打开网页产生的其他错误：{}".format(msg))
+                self.log.error("打开网页产生的其他错误：{}".format(msg))
+                raise Exception("打开网页产生的其他错误：{}".format(msg))
 
     def find_element(self, locator):
         """重写元素定位方法"""
         if not isinstance(locator, tuple):
-            # self.log.error("locator参数必须是元组类型，而不是：{}".format(type(locator)))
+            self.log.error("locator参数必须是元组类型，而不是：{}".format(type(locator)))
             raise TypeError("locator参数必须是元组类型，而不是：{}".format(type(locator)))  # 根据返回值判断是否定位到元素，使用频率很高
         else:
             try:
@@ -142,16 +143,16 @@ class Crazy:
                 if element.is_displayed():
                     return element
                 else:
-                    self.log.error("页面中元素 %s 不可见." % (locator))
+                    self.log.error("页面中元素 {} 不可见.".format(locator))
                     return False
             except:
-                self.log.error("页面中未能找到元素 %s " % (locator))
+                self.log.error("页面中未能找到元素：{}".format(locator))
                 return False
 
     def find_elements(self, locator):
         """定位一组元素"""
         if not isinstance(locator, tuple):
-            # self.log.error("locator参数必须是元组类型，而不是：{}".format(type(locator)))
+            self.log.error("locator参数必须是元组类型，而不是：{}".format(type(locator)))
             raise TypeError("locator参数必须是元组类型，而不是：{}".format(type(locator)))
         else:
             try:
@@ -159,7 +160,7 @@ class Crazy:
                     EC.presence_of_all_elements_located(locator))
                 return elements
             except:
-                self.log.info("页面中未能找到元素 %s" % (locator))
+                self.log.info("页面中未能找到元素：{}".format(locator))
                 return False
 
     def clicks(self, locator, n):
@@ -168,7 +169,7 @@ class Crazy:
         if element:
             element.click()
         else:
-            raise element_not_click_error
+            raise NoSuchElementException(element_not_click_error)
 
     def click(self, locator):
         """点击操作"""
@@ -176,7 +177,7 @@ class Crazy:
         if element:
             element.click()
         else:
-            raise element_not_click_error
+            raise NoSuchElementException(element_not_click_error)
 
     def double_click(self, locator):
         """双击操作"""
@@ -184,7 +185,7 @@ class Crazy:
         if element:
             self.action.double_click(element).perform()
         else:
-            raise element_not_click_error
+            raise NoSuchElementException(element_not_click_error)
 
     def send_keys(self, locator, text):
         """发送文本，清空后输入"""
@@ -193,7 +194,7 @@ class Crazy:
             element.clear()
             element.send_keys(text)
         else:
-            raise element_not_input_error
+            raise NoSuchElementException(element_not_input_error)
 
     def sends_keys(self, locator, text, n):
         """选中一组元素中的一个，发送文本，清空后输入"""
@@ -202,7 +203,7 @@ class Crazy:
             element.clear()
             element.send_keys(text)
         else:
-            raise element_not_input_error
+            raise NoSuchElementException(element_not_input_error)
 
     # ================================================App===============================================================
 
@@ -265,8 +266,8 @@ class Crazy:
             self.log.info("is_text_in_element     成功")
             return result
         except TimeoutException:
-            # self.log.error("%s元素没有定位到" % str(locator))
-            raise (" %s 元素没有定位到" % str(locator))
+            self.log.error(" {} 元素没有定位到".format(locator))
+            raise NoSuchElementException(" {} 元素没有定位到".format(locator))
 
     def is_text_in_value(self, locator, value):
         """判断元素的value值，没有定位到返回False，定位到返回判断结果布尔值"""
@@ -274,8 +275,8 @@ class Crazy:
             result = WebDriverWait(self.driver, self.timeout, self.t).until(
                 EC.text_to_be_present_in_element_value(locator, value))
         except TimeoutException:
-            # self.log.error("元素的value值没有定位到：%s" % str(locator))
-            raise (" %s 元素的value值没有定位到" % str(locator))
+            self.log.error("元素的value值没有定位到：{}".format(locator))
+            raise NoSuchElementException("{} 元素的value值没有定位到".format(locator))
         else:
             return result
 
@@ -371,8 +372,8 @@ class Crazy:
             else:
                 self.move(locator, locator1)
         except ElementNotVisibleException as e:
-            # self.log.error("鼠标点击事件失败：%s" % e)
-            raise ("鼠标点击事件失败：%s" % e)
+            self.log.error("鼠标点击事件失败：{}".format(e))
+            raise ElementNotVisibleException("鼠标点击事件失败：{}".format(e))
 
     def switch_frame(self, frame):
         """判断该frame是否可以switch进去，如果可以的话，返回True并且switch进去，否则返回False
@@ -384,11 +385,11 @@ class Crazy:
             if result:
                 self.log.info("切换iframe成功！")
             else:
-                # self.log.warning("frame 切换失败！")
-                raise ("frame 切换失败！")
+                self.log.warning("iframe 切换失败！")
+                raise NoSuchFrameException("frame 切换失败！")
         except TimeoutException:
-            # self.log.warning("没有发现iframe元素%s" % frame)
-            raise ("没有发现iframe元素%s" % frame)
+            self.log.warning("没有发现iframe元素：{}".format(frame))
+            raise TimeoutException("没有发现iframe元素：{}".format(frame))
 
     def default_content(self):
         "跳出frame到默认<跳到最外层>"
