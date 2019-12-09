@@ -1,0 +1,17 @@
+[32m[2019-12-09 17:12:52,480] [logger.py:98] [logger:__console] [INFO]- 测试用例：<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<unittest.loader._FailedTest testMethod=test_login_test>]>]>[0m
+[32m[2019-12-09 17:12:52,498] [logger.py:98] [logger:__console] [INFO]- 执行用例，生成HTML报告![0m
+[32m[2019-12-09 17:13:13,592] [logger.py:98] [logger:__console] [INFO]- 测试用例：<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<unittest.loader._FailedTest testMethod=test_login_test>]>]>[0m
+[32m[2019-12-09 17:13:13,600] [logger.py:98] [logger:__console] [INFO]- 执行用例，生成HTML报告![0m
+[32m[2019-12-09 17:13:46,749] [logger.py:98] [logger:__console] [INFO]- 测试用例：<unittest.suite.TestSuite tests=[<unittest.suite.TestSuite tests=[<unittest.loader._FailedTest testMethod=test_login_test>]>]>[0m
+[32m[2019-12-09 17:13:46,757] [logger.py:98] [logger:__console] [INFO]- 执行用例，生成HTML报告![0m
+[31m[2019-12-09 17:15:41,137] [logger.py:104] [logger:__console] [ERROR]- 页面中未能找到元素：('id', 'tv_skip')[0m
+[31m[2019-12-09 17:15:52,175] [logger.py:104] [logger:__console] [ERROR]- 页面中未能找到元素：('id', 'tv_search')[0m
+[31m[2019-12-09 17:15:56,407] [logger.py:104] [logger:__console] [ERROR]- 页面中未能找到元素：('id', 'current_price')[0m
+[31m[2019-12-09 17:16:07,520] [logger.py:104] [logger:__console] [ERROR]- 页面中未能找到元素：('id', 'tv_skip')[0m
+[31m[2019-12-09 17:36:47,782] [logger.py:104] [logger:__console] [ERROR]- 页面中未能找到元素：('xpath', "//android.widget.TextView[@text='发现' and @id='dkb']")[0m
+[31m[2019-12-09 18:01:03,596] [logger.py:104] [logger:__console] [ERROR]- 页面中未能找到元素：('xpath', "//android.widget.TextView[@text='小程序助手' and @resource-id='com.tencent.mm:id/cg']")[0m
+[31m[2019-12-09 18:01:17,991] [logger.py:104] [logger:__console] [ERROR]- 页面中未能找到元素：('xpath', "//android.widget.TextView[@text='小程序助手' and @resource-id='com.tencent.mm:id/cg']")[0m
+[31m[2019-12-09 18:01:32,358] [logger.py:104] [logger:__console] [ERROR]- 页面中未能找到元素：('xpath', "//android.widget.TextView[@text='小程序助手' and @resource-id='com.tencent.mm:id/cg']")[0m
+[31m[2019-12-09 18:01:46,479] [logger.py:104] [logger:__console] [ERROR]- 页面中未能找到元素：('xpath', "//android.widget.TextView[@text='小程序助手' and @resource-id='com.tencent.mm:id/cg']")[0m
+[31m[2019-12-09 18:02:00,829] [logger.py:104] [logger:__console] [ERROR]- 页面中未能找到元素：('xpath', "//android.widget.TextView[@text='小程序助手' and @resource-id='com.tencent.mm:id/cg']")[0m
+[31m[2019-12-09 18:02:42,204] [logger.py:104] [logger:__console] [ERROR]- 页面中未能找到元素：('xpath', "//android.widget.TextView[@text='小程序助手' and @resource-id='com.tencent.mm:id/cg']")[0m

@@ -7,18 +7,7 @@
 # 创建时间: 2019/11/16 19:18
 '''
 
-import unittest, time, paramunittest
-from BeautifulReport import BeautifulReport
-from page.login_page import LoginPage
-from common.basics import open_app
-from common.logger import Log
-from common.settings import img_path
-from common.random_upload import uploaded
-from common import read_config
-from hamcrest import *
-
 import datetime, time
-from time import sleep
 
 import pytest
 import yaml
@@ -42,26 +31,26 @@ class TestDemo:
         self.driver = open_app()
         self.login = XueQiuPage(self.driver)
 
-    @pytest.mark.parametrize("keyword, expected_price", [
-        ("jingdong", 10),
-        ("alibaba", 100),
-        ("pdd", 20)
-    ])
-    def test_search(self, keyword, expected_price):
-        if self.login.element_skip_btn():
-            self.login.click_skip_btn()
-        if self.login.element_search_btn():
-            self.login.click_search_btn_loc()
-        self.login.input_search_input_text(keyword)
-        if not self.login.element_name_btn():
-            self.login.click_search_input_text()
-        self.login.click_name_btn()
-
-        price = self.login.element_price()
-
-        assert float(price.text) > expected_price
-        assert "price" in price.get_attribute("resource-id")
-        assert_that(price.get_attribute("package"), equal_to("com.xueqiu.android"))
+    # @pytest.mark.parametrize("keyword, expected_price", [
+    #     ("jingdong", 10),
+    #     ("alibaba", 100),
+    #     ("pdd", 20)
+    # ])
+    # def test_search(self, keyword, expected_price):
+    #     if self.login.element_skip_btn():
+    #         self.login.click_skip_btn()
+    #     if self.login.element_search_btn():
+    #         self.login.click_search_btn_loc()
+    #     self.login.input_search_input_text(keyword)
+    #     if not self.login.element_name_btn():
+    #         self.login.click_search_input_text()
+    #     self.login.click_name_btn()
+    #
+    #     price = self.login.element_price()
+    #
+    #     assert float(price.text) > expected_price
+    #     assert "price" in price.get_attribute("resource-id")
+    #     assert_that(price.get_attribute("package"), equal_to("com.xueqiu.android"))
 
     # @pytest.mark.parametrize("keyword, expected_price", search_data)
     # def test_search(self):

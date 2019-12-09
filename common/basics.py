@@ -215,7 +215,7 @@ class Crazy:
         element_obj.move_to(element1).wait(1000).perform()
 
     def swipeDown(self, t=500, n=1):
-        """向下滑动屏幕"""
+        """向上滑动屏幕"""
         time.sleep(2)
         l = self.driver.get_window_size()
         x1 = l["width"] * 0.5  # x坐标
@@ -226,7 +226,7 @@ class Crazy:
             self.driver.swipe(x1, y1, x1, y2, t)
 
     def swipeUp(self, t=500, n=1):
-        """向上滑动屏幕"""
+        """向下滑动屏幕"""
         time.sleep(2)
         l = self.driver.get_window_size()
         x1 = l["width"] * 0.5  # x坐标
