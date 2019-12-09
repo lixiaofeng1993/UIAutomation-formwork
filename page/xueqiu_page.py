@@ -14,7 +14,7 @@ class XueQiuPage(Crazy):
     skip_btn_loc = ("id", "tv_skip")
 
     def element_skip_btn(self):
-        return self.find_element(self.skip_btn_loc)
+        return self.find_element(self.skip_btn_loc, status=False)
 
     def click_skip_btn(self):
         self.click(self.skip_btn_loc)
@@ -22,7 +22,7 @@ class XueQiuPage(Crazy):
     search_btn_loc = ("id", "tv_search")
 
     def element_search_btn(self):
-        return self.find_element(self.search_btn_loc)
+        return self.find_element(self.search_btn_loc, status=False)
 
     def click_search_btn_loc(self):
         self.click(self.search_btn_loc)
@@ -38,7 +38,7 @@ class XueQiuPage(Crazy):
     name_btn_loc = ("id", "name")
 
     def element_name_btn(self):
-        return self.find_element(self.name_btn_loc)
+        return self.find_element(self.name_btn_loc, status=False)
 
     def click_name_btn(self):
         self.click(self.name_btn_loc)
@@ -46,7 +46,7 @@ class XueQiuPage(Crazy):
     price_text_loc = ("id", "current_price")
 
     def element_price(self):
-        return self.find_element(self.price_text_loc)
+        return self.find_element(self.price_text_loc, status=False)
 
     deal_btn_loc = ("xpath", "//android.widget.TabWidget[@index='0']/android.widget.RelativeLayout")
 

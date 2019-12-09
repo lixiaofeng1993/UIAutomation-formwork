@@ -131,7 +131,7 @@ class Crazy:
                 self.log.error("打开网页产生的其他错误：{}".format(msg))
                 raise Exception("打开网页产生的其他错误：{}".format(msg))
 
-    def find_element(self, locator):
+    def find_element(self, locator, status=True):
         """重写元素定位方法"""
         if not isinstance(locator, tuple):
             self.log.error("locator参数必须是元组类型，而不是：{}".format(type(locator)))
@@ -144,12 +144,18 @@ class Crazy:
                     return element
                 else:
                     self.log.error("页面中元素 {} 不可见.".format(locator))
-                    return False
+                    if status:
+                        raise ElementNotVisibleException("页面中元素 {} 不可见.".format(locator))
+                    else:
+                        return False
             except:
                 self.log.error("页面中未能找到元素：{}".format(locator))
-                return False
+                if status:
+                    raise NoSuchElementException("页面中未能找到元素：{}".format(locator))
+                else:
+                    return False
 
-    def find_elements(self, locator):
+    def find_elements(self, locator, status=True):
         """定位一组元素"""
         if not isinstance(locator, tuple):
             self.log.error("locator参数必须是元组类型，而不是：{}".format(type(locator)))
@@ -161,49 +167,37 @@ class Crazy:
                 return elements
             except:
                 self.log.info("页面中未能找到元素：{}".format(locator))
-                return False
+                if status:
+                    raise NoSuchElementException("页面中未能找到元素：{}".format(locator))
+                else:
+                    return False
 
     def clicks(self, locator, n):
         """点击一组元组中的一个"""
         element = self.find_elements(locator)[n]
-        if element:
-            element.click()
-        else:
-            raise NoSuchElementException(element_not_click_error)
+        element.click()
 
     def click(self, locator):
         """点击操作"""
         element = self.find_element(locator)
-        if element:
-            element.click()
-        else:
-            raise NoSuchElementException(element_not_click_error)
+        element.click()
 
     def double_click(self, locator):
         """双击操作"""
         element = self.find_element(locator)
-        if element:
-            self.action.double_click(element).perform()
-        else:
-            raise NoSuchElementException(element_not_click_error)
+        self.action.double_click(element).perform()
 
     def send_keys(self, locator, text):
         """发送文本，清空后输入"""
         element = self.find_element(locator)
-        if element:
-            element.clear()
-            element.send_keys(text)
-        else:
-            raise NoSuchElementException(element_not_input_error)
+        element.clear()
+        element.send_keys(text)
 
     def sends_keys(self, locator, text, n):
         """选中一组元素中的一个，发送文本，清空后输入"""
         element = self.find_elements(locator)[n]
-        if element:
-            element.clear()
-            element.send_keys(text)
-        else:
-            raise NoSuchElementException(element_not_input_error)
+        element.clear()
+        element.send_keys(text)
 
     # ================================================App===============================================================
 

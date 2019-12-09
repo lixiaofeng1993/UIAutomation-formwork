@@ -42,26 +42,26 @@ class TestDemo:
         self.driver = open_app()
         self.login = XueQiuPage(self.driver)
 
-    # @pytest.mark.parametrize("keyword, expected_price", [
-    #     ("jingdong", 10),
-    #     ("alibaba", 100),
-    #     ("pdd", 20)
-    # ])
-    # def test_search(self, keyword, expected_price):
-    #     if self.login.element_skip_btn():
-    #         self.login.click_skip_btn()
-    #     if self.login.element_search_btn():
-    #         self.login.click_search_btn_loc()
-    #     self.login.input_search_input_text(keyword)
-    #     if not self.login.element_name_btn():
-    #         self.login.click_search_input_text()
-    #     self.login.click_name_btn()
-    #
-    #     price = self.login.element_price()
-    #
-    #     assert float(price.text) > expected_price
-    #     assert "price" in price.get_attribute("resource-id")
-    #     assert_that(price.get_attribute("package"), equal_to("com.xueqiu.android"))
+    @pytest.mark.parametrize("keyword, expected_price", [
+        ("jingdong", 10),
+        ("alibaba", 100),
+        ("pdd", 20)
+    ])
+    def test_search(self, keyword, expected_price):
+        if self.login.element_skip_btn():
+            self.login.click_skip_btn()
+        if self.login.element_search_btn():
+            self.login.click_search_btn_loc()
+        self.login.input_search_input_text(keyword)
+        if not self.login.element_name_btn():
+            self.login.click_search_input_text()
+        self.login.click_name_btn()
+
+        price = self.login.element_price()
+
+        assert float(price.text) > expected_price
+        assert "price" in price.get_attribute("resource-id")
+        assert_that(price.get_attribute("package"), equal_to("com.xueqiu.android"))
 
     # @pytest.mark.parametrize("keyword, expected_price", search_data)
     # def test_search(self):
@@ -78,7 +78,6 @@ class TestDemo:
     # @classmethod
     def teardown_class(self):
         self.driver.quit()
-
 
 # class TestCase:
 #     def __init__(self, path):
