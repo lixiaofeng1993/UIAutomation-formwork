@@ -209,13 +209,17 @@ class Crazy:
         """长按"""
         return self.touch.long_press(element).perform()
 
+    def unknown_drag_and_drop(self, element_obj, element):
+        """长按后才能发现另一个元素的 拖放"""
+        element_obj.move_to(element).wait(1000).release().perform()
+
     def drag_and_drop(self, element, element1):
-        """拖拽, 添加微信小程序到我的小程序"""
+        """能同时发现两个元素的 拖放"""
         element_obj = self.long_press(element)
-        element_obj.move_to(element1).wait(1000).perform()
+        element_obj.move_to(element1).wait(1000).release().perform()
 
     def swipeDown(self, t=500, n=1):
-        """向上滑动屏幕"""
+        """向下滑动屏幕"""
         time.sleep(2)
         l = self.driver.get_window_size()
         x1 = l["width"] * 0.5  # x坐标
@@ -226,7 +230,7 @@ class Crazy:
             self.driver.swipe(x1, y1, x1, y2, t)
 
     def swipeUp(self, t=500, n=1):
-        """向下滑动屏幕"""
+        """向上滑动屏幕"""
         time.sleep(2)
         l = self.driver.get_window_size()
         x1 = l["width"] * 0.5  # x坐标
