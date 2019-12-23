@@ -14,7 +14,7 @@
     <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="ignoredPackages">
         <value>
-          <list size="17">
+          <list size="20">
             <item index="0" class="java.lang.String" itemvalue="pytest" />
             <item index="1" class="java.lang.String" itemvalue="assertpy" />
             <item index="2" class="java.lang.String" itemvalue="requests" />
@@ -32,6 +32,9 @@
             <item index="14" class="java.lang.String" itemvalue="supervisor" />
             <item index="15" class="java.lang.String" itemvalue="flower" />
             <item index="16" class="java.lang.String" itemvalue="httprunner" />
+            <item index="17" class="java.lang.String" itemvalue="Appium-Python-Client" />
+            <item index="18" class="java.lang.String" itemvalue="BeautifulReport" />
+            <item index="19" class="java.lang.String" itemvalue="openpyxl" />
           </list>
         </value>
       </option>

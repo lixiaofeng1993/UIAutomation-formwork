@@ -1,7 +1,7 @@
-- id: tv_search
-- id: search_input_text
-  input: alibaba
-- id: name
-- id: current_price
+- id: com.xueqiu.android:id/home_search
+- id: com.xueqiu.android:id/search_input_text
+  input: 阿里巴巴
+- id: com.xueqiu.android:id/name
+- id: com.xueqiu.android:id/current_price
   get: text
-  eq: 100
+  eq: 200

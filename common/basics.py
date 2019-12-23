@@ -64,7 +64,7 @@ def open_browser(browser="chrome"):
         raise Exception("浏览器出错了呀！{}".format(msg))
 
 
-def open_app():
+def open_app(html=False):
     try:
         desired_caps = {
             "platformName": read_config.platform_name,
@@ -72,10 +72,6 @@ def open_app():
             "deviceName": read_config.device_name,
 
             # "platformVersion": read_config.platform_version,
-
-            "appPackage": read_config.app_package,
-
-            "appActivity": read_config.app_activity,
 
             "automationName": read_config.automationName,
 
@@ -87,8 +83,22 @@ def open_app():
 
             "resetKeyboard": True,
 
+            # "udid": "" # 指定运行设备
             # "chromeOptions": {"androidProcess": "com.tencent.mm:tools"}
         }
+
+        if not html:
+            desired_caps.update({"appPackage": read_config.app_package,
+
+                                 "appActivity": read_config.app_activity, })
+        else:
+            executable_path = check_file(os.path.join(os.path.join(driver_path, "h5"), "chromedriver.exe"))
+            desired_caps.update({"browserName": read_config.browserName,
+
+                                 "chromedriverExecutable": executable_path,
+
+                                 "showChromedriverLog": True, })
+
         # 关联appium
         driver = app.Remote("http://127.0.0.1:4723/wd/hub", desired_caps)
         return driver
