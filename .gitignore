@@ -1,0 +1,10 @@
+.env
+reports/*
+__pycache__/*
+*.pyc
+.python-version
+logs/*
+.idea/*
+.pytest_cache/*
+*.log
+config/

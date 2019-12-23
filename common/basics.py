@@ -228,6 +228,12 @@ class Crazy:
         element_obj = self.long_press(element)
         element_obj.move_to(element1).wait(1000).release().perform()
 
+    def switch_context(self, i):
+        """切换上下文"""
+        context = self.driver.contexts
+        if isinstance(context, list):
+            self.driver.switch_to.context(context[i])
+
     def swipeDown(self, t=500, n=1):
         """向下滑动屏幕"""
         time.sleep(2)
@@ -417,7 +423,6 @@ class Crazy:
             self.driver.switch_to.window(n)
         else:
             all_handle = self.driver.window_handles
-            print(all_handle)
             self.driver.switch_to.window(all_handle[n])
 
     def back(self):
