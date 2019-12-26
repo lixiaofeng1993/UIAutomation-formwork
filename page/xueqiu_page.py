@@ -6,49 +6,25 @@
 # 说   明: 
 # 创建时间: 2019/12/8 15:35
 '''
+from common.base_page import BasePage
 
-from common.basics import Crazy
 
+class SearchPage(BasePage):
+    _search_loc = ("id", "com.xueqiu.android:id/home_search")
+    _search_input_loc = ("id", "com.xueqiu.android:id/search_input_text")
+    _name_loc = ("id", "com.xueqiu.android:id/name")
+    _price_loc = ("id", "com.xueqiu.android:id/current_price")
 
-class XueQiuPage(Crazy):
-    skip_btn_loc = ("id", "tv_skip")
+    def search(self, keyword):
+        self.click(self._search_loc)
+        self.send_keys(self._search_input_loc, keyword)
+        while True:
+            if self.find_element(self._name_loc, status=False):
+                self.clicks(self._name_loc, 0)
+                break
+            else:
+                self.click(self._search_input_loc)
+        return self
 
-    def element_skip_btn(self):
-        return self.find_element(self.skip_btn_loc, status=False)
-
-    def click_skip_btn(self):
-        self.click(self.skip_btn_loc)
-
-    search_btn_loc = ("id", "tv_search")
-
-    def element_search_btn(self):
-        return self.find_element(self.search_btn_loc, status=False)
-
-    def click_search_btn_loc(self):
-        self.click(self.search_btn_loc)
-
-    search_input_text_loc = ("id", "search_input_text")
-
-    def input_search_input_text(self, text):
-        self.send_keys(self.search_input_text_loc, text)
-
-    def click_search_input_text(self):
-        self.click(self.search_input_text_loc)
-
-    name_btn_loc = ("id", "name")
-
-    def element_name_btn(self):
-        return self.find_element(self.name_btn_loc, status=False)
-
-    def click_name_btn(self):
-        self.click(self.name_btn_loc)
-
-    price_text_loc = ("id", "current_price")
-
-    def element_price(self):
-        return self.find_element(self.price_text_loc, status=False)
-
-    deal_btn_loc = ("xpath", "//android.widget.TabWidget[@index='0']/android.widget.RelativeLayout")
-
-    def element_deal_btn(self):
-        return self.find_elements(self.deal_btn_loc)
+    def get_current_price(self):
+        return float(self.get_text(self._price_loc))

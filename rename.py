@@ -8,10 +8,10 @@
 
 import os
 
-type = input('选择要改变的类型<1 case name 加 1；2 case name 去掉1>：')
+type = input('选择要改变的类型<1 testcase name 加 1；2 testcase name 去掉1>：')
 if type == '1':
-    make = input('case name 的共同特征：')
-path = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'case')
+    make = input('testcase name 的共同特征：')
+path = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'testcase')
 py_path_list = os.listdir(path)
 for i in py_path_list:
     py_path = os.path.join(path, i)

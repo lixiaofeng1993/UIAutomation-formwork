@@ -12,7 +12,8 @@ from appium.webdriver.webdriver import WebDriver
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
-from common.basics import open_app
+from page.xueqiu_page import SearchPage
+from common.app import App
 import pytest
 
 
@@ -21,8 +22,7 @@ class TestDemo:
     # print(search_data)
 
     def setup(self):
-        self.driver = open_app(html=False)
-        self.driver.implicitly_wait(10)
+        self.driver = App.open_app(html=False)
         # self.__update()
 
     # def __update(self):
@@ -44,6 +44,11 @@ class TestDemo:
     #         price = self.driver.find_element_by_id("com.xueqiu.android:id/current_price")
     #         assert float(price.text) > expected_price
 
+    def test_search_po(self):
+        search_page = SearchPage(self.driver)
+        search_page.search("阿里巴巴")
+        assert search_page.get_current_price() > 100
+
     # @pytest.mark.parametrize("keyword, expected_price", search_data)
     # def test_search(self, keyword, expected_price):
 
@@ -56,8 +61,8 @@ class TestDemo:
     #     price = self.driver.find_element_by_id("com.xueqiu.android:id/current_price")
     #     assert float(price.text) > expected_price
 
-    def test_yinqing(self):
-        Case("testcase.yaml").run(self.driver)
+    # def test_yinqing(self):
+    #     Case("testcase.yaml").run(self.driver)
 
     # def test_webview(self):
     #     time.sleep(3)

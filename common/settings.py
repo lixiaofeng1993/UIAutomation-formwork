@@ -66,7 +66,7 @@ data_txt_path = check_dir(os.path.join(data_path, "txt" + pattern + "city.txt"))
 config_path = check_dir(os.path.join(BASE_DIR, "config"))  # 配置文件目录
 cfg_path = check_file(os.path.join(config_path, "cfg.ini"))
 
-case_path = check_dir(os.path.join(BASE_DIR, "case"))  # case目录
+case_path = check_dir(os.path.join(BASE_DIR, "testcase"))  # case目录
 
 report_path = check_dir(os.path.join(BASE_DIR, "report"))  # 报告路径
 

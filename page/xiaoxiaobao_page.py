@@ -6,7 +6,7 @@
 # @File    : xiaoxiaobao_page.py
 # @Software: PyCharm
 
-from common.basics import Crazy
+from common.base_page import Crazy
 
 
 class XiaoxiaobaoPage(Crazy):

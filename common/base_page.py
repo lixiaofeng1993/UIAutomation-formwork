@@ -2,13 +2,11 @@
 # -*- coding: utf-8 -*-
 # @Author  : lixiaofeng
 # @Site    :
-# @File    : basics.py
+# @File    : base_page.py
 # @Software: PyCharm
 import os
 import time
 from PIL import Image
-from selenium import webdriver
-from appium import webdriver as app
 from selenium.common.exceptions import *
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains  # web
@@ -18,100 +16,15 @@ from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.wait import WebDriverWait
 from common.logger import Log
 from common import read_config
-from common.settings import driver_path, check_file, file_not_exists_error, element_not_click_error, \
-    element_not_input_error  # 驱动路径
 
 
-def open_browser(browser="chrome"):
-    """打开浏览器函数。firefox、chrome、ie,phantomjs"""
-
-    try:
-        if browser == "firefox":
-            Log().info("start browser name :Firefox")
-            executable_path = check_file(os.path.join(driver_path, "geckodriver.exe"))
-            if not executable_path:
-                raise FileNotFoundError(file_not_exists_error.format(executable_path))
-            else:
-                driver = webdriver.Firefox(executable_path=executable_path)
-                return driver
-        elif browser == "chrome":
-            Log().info("start browser name :Chrome")
-            # 加启动配置,忽略 Chrome正在受到自动软件的控制 提示
-            option = webdriver.ChromeOptions()
-            option.add_argument("disable-infobars")
-            # chrome启动静默模式;默认显示浏览器界面
-            if read_config.chrome_interface != "True":
-                option.add_argument("headless")
-            executable_path = check_file(os.path.join(driver_path, "chromedriver.exe"))
-            if not executable_path:
-                raise FileNotFoundError(file_not_exists_error.format(executable_path))
-            else:
-                driver = webdriver.Chrome(chrome_options=option, executable_path=executable_path)
-                return driver
-        elif browser == "ie":
-            Log().info("start browser name :Ie")
-            driver = webdriver.Ie()
-            return driver
-        elif browser == "js":
-            Log().info("start browser name :PhantomJS")
-            driver = webdriver.PhantomJS()
-            return driver
-        else:
-            Log().warning("额，暂不支持此浏览器诶。先试试firefox、chrome、ie、phantomJS浏览器吧。")
-            raise NoSuchWindowException("额，暂不支持此浏览器诶。先试试firefox、chrome、ie、phantomJS浏览器吧。")
-    except Exception as msg:
-        Log().error("浏览器出错了呀！{}".format(msg))
-        raise Exception("浏览器出错了呀！{}".format(msg))
-
-
-def open_app(html=False):
-    try:
-        desired_caps = {
-            "platformName": read_config.platform_name,
-
-            "deviceName": read_config.device_name,
-
-            # "platformVersion": read_config.platform_version,
-
-            "automationName": read_config.automationName,
-
-            # 不重置app
-            "noReset": True,
-
-            # 隐藏手机默认键盘
-            "unicodeKeyboard": True,
-
-            "resetKeyboard": True,
-
-            # "udid": "" # 指定运行设备
-            # "chromeOptions": {"androidProcess": "com.tencent.mm:tools"}
-        }
-
-        if not html:
-            desired_caps.update({"appPackage": read_config.app_package,
-
-                                 "appActivity": read_config.app_activity, })
-        else:
-            executable_path = check_file(os.path.join(os.path.join(driver_path, "h5"), "chromedriver.exe"))
-            desired_caps.update({"browserName": read_config.browserName,
-
-                                 "chromedriverExecutable": executable_path,
-
-                                 "showChromedriverLog": True, })
-
-        # 关联appium
-        driver = app.Remote("http://127.0.0.1:4723/wd/hub", desired_caps)
-        return driver
-    except Exception as e:
-        raise Exception("连接 Appium 出错：{}".format(e))
-
-
-class Crazy:
+class BasePage:
     """基于原生的selenium框架做二次封装"""
 
     def __init__(self, driver):
         """启动浏览器参数化，默认启动chrome"""
         self.driver = driver
+        self.driver.implicitly_wait(10)  # 隐式等待
         self.action = ActionChains(self.driver)
         self.touch = TouchAction(self.driver)
         self.timeout = 10  # 显示等待超时时间
@@ -181,6 +94,16 @@ class Crazy:
                     raise NoSuchElementException("页面中未能找到元素：{}".format(locator))
                 else:
                     return False
+
+    def handle_exception(self, locator):
+        """自定义异常处理"""
+        self.driver.implicitly_wait(0)  # 隐式等待
+        page_source = self.driver.page_source
+        if "image_cancel" in page_source:
+            self.click(locator)
+        elif "tips" in page_source:
+            pass
+        self.driver.implicitly_wait(10)  # 隐式等待
 
     def clicks(self, locator, n):
         """点击一组元组中的一个"""

@@ -7,7 +7,7 @@
 # 创建时间: 2019/11/16 19:07
 '''
 
-from common.basics import Crazy
+from common.base_page import Crazy
 
 
 class LoginPage(Crazy):

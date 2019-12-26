@@ -1,9 +1,0 @@
-[32m[2019-12-10 12:50:24,740] [logger.py:98] [logger:__console] [INFO]- 页面中未能找到元素：('xpath', "//android.widget.TabWidget[@index='0']/android.widget.RelativeLayout")[0m
-[32m[2019-12-10 12:52:09,994] [logger.py:98] [logger:__console] [INFO]- 页面中未能找到元素：('xpath', "//android.widget.TextView[@text='包妈优选']")[0m
-[32m[2019-12-10 12:53:25,638] [logger.py:98] [logger:__console] [INFO]- 页面中未能找到元素：('xpath', "//android.widget.TextView[@text='包妈优选']")[0m
-[32m[2019-12-10 12:55:08,050] [logger.py:98] [logger:__console] [INFO]- 页面中未能找到元素：('xpath', "//android.widget.TextView[@text='包妈优选']")[0m
-[32m[2019-12-10 12:57:54,683] [logger.py:98] [logger:__console] [INFO]- 页面中未能找到元素：('xpath', "//android.widget.TextView[@text='包妈优选']")[0m
-[32m[2019-12-10 12:59:27,087] [logger.py:98] [logger:__console] [INFO]- 页面中未能找到元素：('xpath', "//android.widget.TextView[@text='包妈优选']")[0m
-[31m[2019-12-10 13:04:00,892] [logger.py:104] [logger:__console] [ERROR]- 页面中未能找到元素：('xpath', "//android.widget.TextView[@text='小程序助手' and @resource-id='com.tencent.mm:id/cg']")[0m
-[31m[2019-12-10 13:10:52,201] [logger.py:104] [logger:__console] [ERROR]- 页面中未能找到元素：('xpath', "//android.widget.TextView[@text='小程序助手' and @resource-id='com.tencent.mm:id/a0x']")[0m
-[31m[2019-12-10 13:42:09,020] [logger.py:104] [logger:__console] [ERROR]- 页面中未能找到元素：('xpath', "//android.widget.TextView[@text='小程序助手']")[0m
