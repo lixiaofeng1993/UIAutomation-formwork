@@ -440,9 +440,3 @@ class BasePage:
     def get_cookies(self):
         """获取cookies"""
         return self.driver.get_cookies()
-
-
-if __name__ == "__main__":
-    driver = open_browser("firefox")
-    c = Crazy(driver)
-    c.open("https://dev.edu.xxbmm.com/zh/user/user")
